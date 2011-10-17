@@ -6,7 +6,7 @@
 #
 #     make
 #
-# dentro do diretório da artigo.  Se o LaTeX estiver
+# dentro do diretório da monografia.  Se o LaTeX estiver
 # emperrado, você pode tentar limpar seus arquivos auxiliares
 # usando:
 #
@@ -17,22 +17,22 @@
 default: pdf
 
 pdf:
-	pdflatex artigo.tex
-	bibtex artigo
-	pdflatex artigo.tex
-	pdflatex artigo.tex
+	pdflatex monografia.tex
+	bibtex monografia
+	pdflatex monografia.tex
+	pdflatex monografia.tex
 
 ps: dvi
-	dvips artigo.dvi
+	dvips monografia.dvi
 
 dvi:
-	latex artigo.tex
-	bibtex artigo
-	latex artigo.tex
-	latex artigo.tex
+	latex monografia.tex
+	bibtex monografia
+	latex monografia.tex
+	latex monografia.tex
 
 clean:
-	rm -vf artigo.{aux,bbl,blg,brf,fdb_latexmk,lof,log,lot,out,toc}
+	rm -vf monografia.{aux,bbl,blg,brf,fdb_latexmk,lof,log,lot,out,toc}
 
 mrproper: clean
-	rm -vf artigo.{dvi,pdf,ps}
+	rm -vf monografia.{dvi,pdf,ps}
