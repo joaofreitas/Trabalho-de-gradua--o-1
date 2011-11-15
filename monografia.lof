@@ -3,3 +3,6 @@
 \select@language {brazil}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Esquematiza\IeC {\c c}\IeC {\~a}o do funcionamento b\IeC {\'a}sico de um agente em um ambiente.}}{3}{figure.2.1}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Dependabilidade, seguran\IeC {\c c}a e seus atributos em comum. Fonte:~\cite {algirdas04}}}{7}{figure.2.2}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Ambiente distriu\IeC {\'\i }do no JAMA. Os agentes n\IeC {\~a}o se comunicam diretamente.}}{10}{figure.2.3}

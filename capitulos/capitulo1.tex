@@ -1,32 +1,7 @@
 \chapter{Introdução}
 
-O foco deste trabalho é avaliar parâmetros de confiabilidade em uma plataforma distribuída de sistemas multiagente. Mais especificamente, serão levantados requisitos de dependabilidade na
-arquitetura de sistemas multiagente JAMA {-} Java Abstract plataform for MultiAgent systems, cuja descrição pode ser encontrada em~\cite{parise11} e propor melhorias
-na plataforma a fim de aumentar a confiabilidade.
+Os sistemas atuais tornam-se cada vez mais complexos, necessitando cada vez mais de poder de processamento. Para a execução dessas aplicações são necessários investimentos cada vez mais altos nos hardwares, existindo sempre um fator limitante (custo ou tecnologia). A partir dessa motivação, aplicações começam então a serem projetadas para rodar de forma descentralizada, com componentes e serviços rodando em vários lugares diferentes em uma mesma rede. Quando essas aplicações estão relacionadas à área de Inteligência Artificial, abordamos o campo da Inteligência Artificial Distribuída (IAD).
 
-\section{Sistemas Multiagentes}
+Uma dificuldade porém é mensurar o grau de confiabilidade dos componentes executando nesse ambiente distribuído. Vários componentes podem ser dependentes uns dos outros, um erro pode ocasionar uma falha abrupta em toda a execução do software. Não é possível confiar 100\% em softwares acreditando que eles sejam livre de erros e falhas. Esse é o objeto de estudo da Dependabilidade de Software.
 
-Inteligencia artificial é a área da Ciência da Computaçao onde estuda-se a inteligência de maneira teórica e experimental~\cite{novig95}. Nela, uma das sub-áreas
-de IA é o estudo de agentes inteligentes e sistemas multiagentes. Sistemas multiagentes são sistemas compostos por vários agentes que, de acordo com~\cite{wooldridge95}
-cada agente é uma entidade virtual a qual é capaz de perceber o ambiente onde está executando, realiza um processamento
-sem a intervenção dos outros agentes ou de pessoas e então modifica esse ambiente. Os agentes agem sobre um ambiente através de sensores e agem sobre o mesmo através
-de efetuadores. A interação entre esses agentes ocorre apenas por troca de mensagens do componente para o ambiente e este encarrega-se de enviar a mensagem para o ambiente.
-
-
-\section{Dependabilidade}
-
-A dependabilidade de software é a propriedade medida em um sistema computacional A que pode justificadamente confiar em um serviço prestado por um sistema B. Mais especificamente,
-em um sistema multiagente, é a propriedade que podemos medir sobre a confiança que podemos mensurar em um agente dado que ele roda em um ambiente descentralizado. Devido a complexidade
-do ambiente, existem diversos desafios de acordo com~\cite{hoffman08} no projeto desse ambiente. Em~\cite{algirdas04} são definidos as principais propriedades relacionadas
-a dependabilidade, sendo um dos objetivos deste trabalho a identificação destas propriedades na plataforma JAMA.
-
-\section{JAMA}
-
-O desenvolvimento completo da plataforma JAMA está descrita em~\cite{parise11}. Seu objetivo foi desenvolver uma plataforma de sistemas multiagentes descentralizado
-e fracamente acoplado, garantindo a comunicação dos agentes com os outros agentes e com os serviços do ambiente. Essa plataforma foi desenvolvida na linguagem Javae outros
-frameworks de softwares distrubuidos. O trabalho porém carece de uma análise de dependabilidade, envolvendo os seus componentes e integração dos mesmos. Faz-se necessário
-então um estudo mais aprofundado na plataforma, sendo esse portanto o foco principal deste trabalho.
-
-
-
-
+O objetivo desse trabalho é mensurar em um ambiente distribuído criado na Universidade de Brasília (JAMA) as principais propriedades de dependabilidade, bem como realizar um estudo levantando os componentes mais críticos dessa plataforma. Em seguida, propor um modelo, correção ou atualização para a plataforma visando melhorias tendo em vista a dependabilidade. 
