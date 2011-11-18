@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.10.31)  18 NOV 2011 01:55
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.10.31)  18 NOV 2011 19:55
 entering extended mode
  %&-line parsing enabled.
 **monografia.tex
@@ -679,102 +679,118 @@ Cap\'{\i }tulo 1.
 Cap\'{\i }tulo 2.
 [2
 
-] <images/agente-basico.png, id=208, 280.04625pt x 177.66376pt>
+] <images/agente-basico.png, id=213, 280.04625pt x 177.66376pt>
 File: images/agente-basico.png Graphic file (type png)
 
 <use images/agente-basico.png>
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 35.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 36.
 
 (/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 35.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 36.
  [3 <./images/agente-basico.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 49--49
+Underfull \hbox (badness 10000) in paragraph at lines 50--50
 []\T1/cmr/bx/n/12 Tipo de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--49
+Underfull \hbox (badness 10000) in paragraph at lines 50--50
 []\T1/cmr/bx/n/12 Medida de
  []
 
 
-Underfull \hbox (badness 1466) in paragraph at lines 51--51
+Underfull \hbox (badness 1466) in paragraph at lines 52--52
 []\T1/cmr/m/n/12 Avarias no veí-
  []
 
 
-Underfull \hbox (badness 1735) in paragraph at lines 51--51
+Underfull \hbox (badness 1735) in paragraph at lines 52--52
 []\T1/cmr/m/n/12 Freio do carro,
  []
 
 
-Underfull \hbox (badness 2111) in paragraph at lines 53--53
+Underfull \hbox (badness 2111) in paragraph at lines 54--54
 \T1/cmr/m/n/12 nente com-pu-ta-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--53
+Underfull \hbox (badness 10000) in paragraph at lines 54--54
 []\T1/cmr/m/n/12 Quantidade de
  []
 
 
-Underfull \hbox (badness 1496) in paragraph at lines 55--55
+Underfull \hbox (badness 1496) in paragraph at lines 56--56
 []\T1/cmr/m/n/12 Saúde do pa-ci-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--55
+Underfull \hbox (badness 10000) in paragraph at lines 56--56
 []\T1/cmr/m/n/12 Paciente,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--55
+Underfull \hbox (badness 10000) in paragraph at lines 56--56
 \T1/cmr/m/n/12 am-bi-ente
  []
 
 
-Underfull \hbox (badness 1466) in paragraph at lines 55--56
+Underfull \hbox (badness 1466) in paragraph at lines 56--57
 \T1/cmr/m/n/12 to-mas do pa-ci-
  []
 
 
-Overfull \hbox (3.09444pt too wide) in paragraph at lines 47--58
+Overfull \hbox (3.09444pt too wide) in paragraph at lines 48--59
 [][] 
  []
 
 [4] [5] [6]
-<images/dependabilidade-seguranca.png, id=238, 358.33875pt x 153.57375pt>
+<images/dependabilidade-seguranca.png, id=243, 358.33875pt x 153.57375pt>
 File: images/dependabilidade-seguranca.png Graphic file (type png)
 
 <use images/dependabilidade-seguranca.png> [7 <./images/dependabilidade-seguran
-ca.png (PNG copy)>] [8] [9] [10] [11] [12] [13]
-<images/ambiente.png, id=302, 369.38pt x 137.51375pt>
+ca.png (PNG copy)>] [8] [9] [10] [11]
+<images/roteamento-pastry.png, id=291, 489.83pt x 439.6425pt>
+File: images/roteamento-pastry.png Graphic file (type png)
+
+<use images/roteamento-pastry.png> [12] [13 <./images/roteamento-pastry.png>]
+<images/ambiente.png, id=313, 369.38pt x 137.51375pt>
 File: images/ambiente.png Graphic file (type png)
 
-<use images/ambiente.png> [14 <./images/ambiente.png (PNG copy)>]) [15]
-(./monografia.bbl (./monografia.brf)
+<use images/ambiente.png> [14 <./images/ambiente.png (PNG copy)>] [15])
+[16] (./monografia.bbl (./monografia.brf)
 \tf@brf=\write7
 \openout7 = `monografia.brf'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 61--61
-[]\T1/cmr/m/n/12 Carlos Vi-ní-cius Sar-mento Silva.  Agen-tes de mi-ne-ra-ção e
- sua apli-
+Underfull \hbox (badness 10000) in paragraph at lines 21--21
+[]\T1/cmr/m/n/12 Leone Pa-rise Vi-eira da Silva e Ra-jiv Ge-e-verghese.  Im-ple
+-men-ta-ção
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 61--61
-\T1/cmr/m/n/12 ca-ção no do-mí-nio de au-di-to-ria go-ver-na-men-tal.  Dis-po-n
-í-vel em
+Underfull \hbox (badness 10000) in paragraph at lines 21--21
+\T1/cmr/m/n/12 de uma pla-ta-forma de de-sen-vol-vi-mento de sis-tema mul-ti-a-
+gente com
  []
 
-[16
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--21
+\T1/cmr/m/n/12 abor-da-gem peer-to-peer.  Aces-sado em 18/11/2011. Dis-po-ní-ve
+l em
+ []
 
 
-]) [17] (./monografia.aux)
+Underfull \hbox (badness 1769) in paragraph at lines 21--21
+\T1/cmr/m/n/12 http://monografias.cic.unb.br/dspace/handle/123456789/316, Março
+ 2011.  [][]13[][],
+ []
+
+[17
+
+
+]) [18] (./monografia.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.74pt have occurred.
@@ -785,13 +801,13 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
  )
 (\end occurred when \iffalse on line 462 was incomplete) 
 Here is how much of TeX's memory you used:
- 7011 strings out of 495041
- 96032 string characters out of 1181896
+ 7019 strings out of 495041
+ 96224 string characters out of 1181896
  193298 words of memory out of 3000000
- 9953 multiletter control sequences out of 15000+50000
+ 9958 multiletter control sequences out of 15000+50000
  16227 words of font info for 36 fonts, out of 3000000 for 9000
  30 hyphenation exceptions out of 8191
- 45i,10n,69p,854b,463s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 45i,10n,69p,854b,461s stack positions out of 5000i,500n,10000p,200000b,50000s
  </home/joaofreitas/.te
 xmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </home/joaofreitas/.texmf-v
 ar/fonts/pk/ljfour/jknappen/ec/ecti1095.600pk> </home/joaofreitas/.texmf-var/fo
@@ -804,9 +820,9 @@ en/ec/ecrm1200.600pk> </home/joaofreitas/.texmf-var/fonts/pk/ljfour/jknappen/ec
 1728.600pk> </home/joaofreitas/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.
 600pk> </home/joaofreitas/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2074.600pk
 ></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on monografia.pdf (27 pages, 292589 bytes).
+Output written on monografia.pdf (28 pages, 308586 bytes).
 PDF statistics:
- 815 PDF objects out of 1000 (max. 8388607)
- 82 named destinations out of 1000 (max. 500000)
- 205 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 834 PDF objects out of 1000 (max. 8388607)
+ 84 named destinations out of 1000 (max. 500000)
+ 210 words of extra memory for PDF output out of 10000 (max. 10000000)
 

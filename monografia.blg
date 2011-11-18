@@ -7,43 +7,43 @@ Warning--there's a number but no series in novig95
 Warning--there's a number but no series in wooldridge04
 You've used 13 entries,
             2118 wiz_defined-function locations,
-            569 strings with 5952 characters,
-and the built_in function-call counts, 3129 in all, are:
-= -- 304
+            571 strings with 6100 characters,
+and the built_in function-call counts, 3229 in all, are:
+= -- 319
 > -- 130
 < -- 3
 + -- 55
 - -- 40
-* -- 178
-:= -- 566
-add.period$ -- 41
+* -- 194
+:= -- 583
+add.period$ -- 42
 call.type$ -- 13
 change.case$ -- 54
 chr.to.int$ -- 0
 cite$ -- 16
-duplicate$ -- 125
-empty$ -- 259
+duplicate$ -- 129
+empty$ -- 264
 format.name$ -- 40
-if$ -- 641
+if$ -- 659
 int.to.chr$ -- 0
 int.to.str$ -- 13
-missing$ -- 13
-newline$ -- 67
+missing$ -- 14
+newline$ -- 68
 num.names$ -- 26
-pop$ -- 68
+pop$ -- 61
 preamble$ -- 1
 purify$ -- 46
 quote$ -- 0
-skip$ -- 78
+skip$ -- 77
 stack$ -- 0
-substring$ -- 108
+substring$ -- 133
 swap$ -- 13
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 42
 warning$ -- 3
-while$ -- 31
+while$ -- 33
 width$ -- 15
-write$ -- 137
+write$ -- 140
 (There were 3 warnings)

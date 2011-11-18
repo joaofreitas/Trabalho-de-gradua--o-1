@@ -22,6 +22,7 @@ Com o crescimento dos estudos relacionado a este campo, a inteligência artifici
 De acordo com~\cite{novig95}, agentes são entidades (reais ou virtuais) que funcionam de forma autônoma em um ambiente, ou seja, não necessitam de intervenção humana para realizar processamento. Esse ambiente de funcionamento do agente geralmente contém vários outros agentes e é possível a comunicação entre eles através do ambiente por meio de troca de mensagens. Em geral o funcionamento de agentes acontece de forma a perceberem o ambiente em que estão por meio de sensores, fazem análises com base nessa interação inicial e por fim podem agir sobre o ambiente de forma a modifica-lo por meio de efetuadores. A figura~\ref{fig:agente-basico} apresenta um resumo do que foi dito.
 
 \begin{figure}
+	\centering
 	\includegraphics[scale=0.75]{images/agente-basico.png}
 	\caption{Esquematização do funcionamento básico de um agente em um ambiente.}
 	\label{fig:agente-basico}
@@ -117,6 +118,7 @@ Dependabilidade é uma área que vem desenvolvendo seus estudos de forma crescen
 Alguns atributos são muito próximos da segurança da informação, como por exemplo a confidencialidade, que é a capacidade de não prover informação para entidades desconhecidas. Outros atributos são, na verdade, uma composição com a segurança. Por exemplo a integridade e disponibilidade. Integridade com acessos não autorizados e disponibilidade apenas para acessos autorizados. A figura~\ref{fig:dependabilidade-seguranca} sintetiza o que foi dito, mostrando os atributos em comum das duas áreas:
 
 \begin{figure}
+	\centering
 	\includegraphics[scale=0.75]{images/dependabilidade-seguranca.png}
 	\caption{Dependabilidade, segurança e seus atributos em comum. Fonte:~\cite{algirdas04}}
 	\label{fig:dependabilidade-seguranca}
@@ -221,6 +223,7 @@ No mapa da tabela~\ref{mapa_vizinhaca_tapestry}, temos os nós separados por lin
 O mesmo raciocício se aplica às demais linhas. Por essa tabela, será possível então o roteamento de objetos ao longo da rede. Na imagem~\ref{fig:roteamento-obj}, podemos verificar um roteamento simples de um objeto documento do nó 4228 para o nó 4377 (será omitido por enquanto o mesmo objeto do nó AA93). O primeiro salto de envio verifica o primeiro dígito do \emph{receiver id}, consulta na tabela de vizinhos e faz o envio. No caso, 4228 olha o dígito 1 do id do destino 4377 e em seguida faz o envio para 43FE. Em 43FE ele faz o mesmo procedimento, mas para o segundo dígito do destino 4377. Ele então envia para 437A. O mesmo ocorre para 437 mas para o terceiro dígito do destino 4377. Ele enfim chega no destino 4377 e o objeto pode ser passado para a aplicação.
 
 \begin{figure}
+	\centering
 	\caption{Roteamento de mensagem ou objeto com os ponteiros localizadores do emissor. Imagem retirada de~\cite{welzi11}}
 	\label{fig:roteamento-obj}
 \end{figure}
@@ -250,6 +253,21 @@ Existem situações onde o próximo caracter do \emph{receiver id} não existe n
 Dessa forma, o~\emph{Tapestry} garante alta disponibilidade da rede sem contudo prejudicar a performance.
 
 \subsubsection{Pastry}
+
+Similar ao~\emph{Tapestry}, o \emph{Pastry} é uma rede de roteamento que também utiliza uma tabela hash distribuída nos seus nós para roteamento. Ela preserva as características da rede~\emph{Tapestry}: É completamente descentralizada, tolerante a falhas, escalável e confiável. A rede \emph{pastry} foi concebida para alto desempenho.
+
+De acordo com~\cite{rowstron01}, a arquitetura \emph{pastry} possui a seguinte característica. Cada nó na rede possui um identificador único(\emph{nodeid}). Ao receber uma mensagem e uma chave numérica, a rede tem a capacidade de realizar o roteamento de forma eficiente para o nó que contém a chave mais próxima numericamente, visando minimizar a viagem da mensagem pela rede.
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.5]{images/roteamento-pastry.png}
+	\caption{Roteamento de mensagem na rede pastry do nodo 64a1fc. Imagem retirada de~\cite{rowstron01}}
+	\label{fig:roteamento-pastry}
+\end{figure}
+
+A figura~\ref{fig:roteamento-pastry} exemplifica um o roteamento de uma mensagem do nodo 64a1fc até o nodo d467c4. Em cada salto, a rede preocupa-se em encontrar um caminho mínimo para a entrega da mensagem.
+
+Como dito anteriormente, 
 
 \subsubsection{Kademlia}
 
@@ -288,6 +306,7 @@ Como foi dito anteriormente, um sistema multiagente tem basicamente duas entidad
 Na arquitetura do JAMA atua como uma camada que abstrai as camadas inferiores, permitindo a localização e comunicação de agentes de forma mais transparente. Os agentes emitem mensagens nesse ambiente e ele se encarrega de notificar todos os agentes ouvintes. Por ser uma arquitetura distribuída, os agentes não tem conhecimento se estão rodando na mesma máquina ou não. Logo não existe comunicação direta entre os agentes, o ambiente será o mediador entre eles caso seja necessário haver algum tipo de comunicação. A imagem~\ref{fig:ambiente} sintetiza o que foi explicado.
 
 \begin{figure}
+	\centering
 	\includegraphics[scale=0.75]{images/ambiente.png}
 	\caption{Ambiente distriuído no JAMA. Os agentes não se comunicam diretamente.}
 	\label{fig:ambiente}
