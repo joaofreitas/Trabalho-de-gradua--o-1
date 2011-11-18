@@ -13,10 +13,17 @@
 \contentsline {subsection}{\numberline {2.3.1}Introdu\IeC {\c c}\IeC {\~a}o}{7}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}Arquitetura}{9}{subsection.2.3.2}
 \contentsline {subsection}{\numberline {2.3.3}Roteamento}{9}{subsection.2.3.3}
-\contentsline {section}{\numberline {2.4}JAMA}{9}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Ambiente}{9}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}Adaptador de rede}{10}{subsection.2.4.2}
-\contentsline {subsection}{\numberline {2.4.3}Barramento de eventos}{11}{subsection.2.4.3}
-\contentsline {subsection}{\numberline {2.4.4}Agente}{11}{subsection.2.4.4}
-\contentsline {section}{\numberline {2.5}Desafios desse trabalho}{11}{section.2.5}
-\contentsline {chapter}{Refer\^encias}{12}{section*.8}
+\contentsline {subsubsection}{Plaxton}{9}{section*.8}
+\contentsline {subsubsection}{Tapestry}{10}{section*.9}
+\contentsline {subsubsection}{Pastry}{13}{section*.10}
+\contentsline {subsubsection}{Kademlia}{13}{section*.11}
+\contentsline {subsubsection}{Chord}{13}{section*.12}
+\contentsline {subsubsection}{CAN}{13}{section*.13}
+\contentsline {subsubsection}{Freenet}{13}{section*.14}
+\contentsline {section}{\numberline {2.4}JAMA}{13}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Ambiente}{14}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Adaptador de rede}{14}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}Barramento de eventos}{15}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.4}Agente}{15}{subsection.2.4.4}
+\contentsline {section}{\numberline {2.5}Desafios desse trabalho}{15}{section.2.5}
+\contentsline {chapter}{Refer\^encias}{16}{section*.15}

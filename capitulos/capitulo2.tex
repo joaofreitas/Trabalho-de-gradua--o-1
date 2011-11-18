@@ -156,15 +156,120 @@ O Napster porém foi acusado de violação de direitos autorais pela \emph{Recor
 
 A tecnologia P2P então evoluiu muito rápido devido ao sucesso do Napster. A rede P2P evolui de forma a não permitir apenas compartilhamento de músicas, porém qualquer tipo de dado. Outras programas e arquiteturas foram surgindo com o passar do tempo, como por exemplo o \emph{{K}a{Z}aa} e o \emph{Gnutella}. Essas redes desenvolveram uma arquitetura completamente descentralizada, dificultando ainda mais o controle de fluxo na rede.
 
-O P2P atualmente não tem seu grande fim apenas no compartilhamento de conteúdo multimídia. Diversas aplicações corporativas fazem uso de uma rede descentralizada objetivando desempenho, tempo de resposta, redução de recursos, dentre outros. Supondo apl
+O P2P atualmente não tem seu grande fim apenas no compartilhamento de conteúdo multimídia. Diversas aplicações corporativas fazem uso de redes descentralizadas objetivando desempenho, tempo de resposta, redução de recursos, dentre outros.
+
+Uma aplicação interessante está disponível no artigo de~\cite{stilling03}, um sistema de persistência distribuído baseado em XML. O trabalho analisou diversos algoritmos e encontrou o melhor para aplicar a idéia de descentralizar uma base de dados em XML distribuído. Dessa forma uma aplicação que necessita de uma consulta pode lançá-la a qualquer um dos nós, sendo possível receber a resposta em um tempo mais rápido. Isso ocorre por que cada nó possui uma base de dados pequena e realiza a consulta de maneira mais rápida do que se tivesse a base de dados completa. Além disso essa consulta é feita de forma simultânea, o que reduz drasticamente o tempo de espera.
+
+O futuro do P2P ainda permanece incerto. Por um lado existem grandes dificuldades a serem enfrentadas pelas empresas que usam a tecnologia. Por exemplo as aplicações de compartilhamento de dados sofrem grande risco de evolução, visto que violam direitos autorais, gerando disputas judiciais e gastos elevados de recursos para proteção de processos legais. Além disso, existe o risco constante de spams e vírus que se propagam na rede e são difíceis de controlar.
+
+Por outro lado aplicações de alto desempenho veem no P2P um futuro bastante promissor. Empresas começam a investir pesado na tecnologia visando obter uma forma barata de armazenamento e compartilhamento de arquivos em suas redes locais. Elas também objetivam redução de custos de hardware, pois aplicações que necessitam de muito poder de processamento exigem hardwares melhores e mais caros. A solução está em dividir o software em vários pares que realizam processamento de partes menores, porém de forma simultânea, ajudando então no processamento total.
 
 \subsection{Arquitetura}
 
 \subsection{Roteamento}
 
+\subsubsection{Plaxton}
+
+A rede \emph{Plaxton} consiste em uma estrutura de dados de objetos distribuídos na rede. Ela foi projetada para suportar a localização dos objetos e mensagens para os objetos na rede de forma semelhante ao percorrimento de uma árvore. Em geral uma rede \emph{Plaxton} e todas as outras que foram derivadas dela possuem as seguintes entidades:
+\begin{itemize}
+	\item \emph{Routers} ou roteadores - São os nós de uma rede \emph{plaxton}.
+	\item \emph{Routing} ou roteamento - Troca de mensagens entre os roteadores.
+	\item \emph{Publishing} ou publicação - Registro de objetos no nó raiz.
+	\item \emph{Plaxton Mesh} - Representa a estrutura de dados da rede.
+\end{itemize}
+
+O uso dessa estrutura garante um tempo rápido de entrega das mensagens nos roteadores. Entretanto é importante ressaltar que existem alguns pontos negativos nessa arquitetura. A primeira delas é que a rede é fixa. Ou seja, durante o seu funcionamento não é permitido a inserção ou a remoção de mais nós na rede, visto que um nó será responsável por conhecer todo um caminho e sua ausência implicaria na perda de parte da rede. Além disso, a dere \emph{plaxton} requer a existência de um nó raiz que irá conhecer todos os objetos. Logo a rede possui um ponto único de falha, ou seja, um elemento crítico na rede que caso ocorra uma falha, toda a rede para de funcionar.
+
+O mecanismo de roteamento do \emph{plaxton} cria em cada nó mapas de roteamento locais, também chamados de mapas de vizinhança, que são responsáveis por rotear as mensagens até o seu destino (\emph{destination id}). Esses mapas possuem várias camadas, digamos x camadas, cada uma com um número y de entradas iguais a base do ID. A busca do próximo nó consiste em buscar o próximo dígito do local de destino nos n+1 níveis do mapa uma entrada j em uma camada i.
+
+Esse mecanismo de roteamento permite também uma busca de um objeto no servidor, bem como o envio de mensagens. O servidor que possui o objeto em sua memória faz um anúncio para o nó raiz único na rede, que é responsável por armazenar o endereço de todos os objetos (esse nó único raíz é o ponto único de falha mencionado anteriormente). Essa publicação ao ser enviada para o nó raiz é enviada também para os roteadores que estão no caminho, fazendo então que esses roteadores conheçam quem está abaixo deles.
+
+Como dito anteriormente, é possível o cliente enviar uma mensagem para objetos na rede. Essas mensagens são enviadas para o destinatário de forma a ter como destinatário inicial o nó raiz. A mensagem então vai sendo roteada e caso algum roteador tenha alguma informação do destinatário final da mensagem, ele encaminha então para o mesmo. Caso contrário a mensagem é enviada cada vez mais próxima do nó raiz. Caso a mensagem passe por um caminho onde o nó destinatário não seja conhecido ela será enviada ao nó raiz, onde todos os objetos são registrados. Ela então conhecerá o caminho do nó destinatário final e será roteada até ele.
+
+\subsubsection{Tapestry}
+
+De acordo com~\cite{rowstron01} o \emph{Tapestry} é uma arquitetura auto organizada, escalável, robusta que faz roteamento requisições de conteúdo para o destino de forma eficiente e totalmente descentralizada em um ambiente de carga alta de uso, rede congestionada e alta probabilidade de falha nos nós. O \emph{Tapestry} tem uma noção de localidade dos pares, o que garante que ele conseguirá entregar requisições de forma independente dos nós. Foi desenvolvido em 2004 na Universidade da Califórnia, \emph{Berkley} e foi baseado no \emph{Plaxton}.
+
+O \emph{Tapestry} mantém uma semelhanças com o \emph{Plaxton} que é o modo de endereçamento da malha de vizinhos: O número ID dos vizinhos ainda é o responsável pelo roteamento de mensagens e objetos. Cada vizinho de um nó é separado conforme o número de cada caracter na tabela de vizinhos. Os caracteres do ID normalmente são dígitos hexadecimais, o que ocasiona em uma tabela de base 16, sendo que o \emph{Tapestry} mantém várias tabelas de vizinhos. A tabela~\ref{mapa_vizinhaca_tapestry} exemplifica o que foi mostrado.
+
+\begin{table}
+	\begin{tabular}{|p{2cm} |p{1cm} |p{1cm} |p{1cm} |p{1cm} |p{1cm} |p{1cm} |p{1cm} |p{1cm}|}
+		\hline
+		\textbf{Level}	& \textbf{1} & \textbf{2} & \textbf{3}  & \textbf{4}  & \textbf{5}  & \textbf{6} & \textbf{8} & \textbf{A}	\\
+		\hline
+				1 		& 1D76 		 & 27AB 	  &  			&  			  &		51E5	&	6FA3	 &			  &	            \\
+		\hline
+				2 		& 	 		 & 		 	  &  43C9		&  	44AF	  &				&			 &			  &	            \\
+		\hline
+				3 		& 	 		 & 		 	  &  			&  			  &				&			 &			  &	   42A2     \\
+		\hline
+				4 		& 	 		 & 			  &  			&  			  &				&			 &		4228  &	            \\
+		\hline
+	\end{tabular}
+	\caption{Mapa da vizinhança de uma rede \emph{Tapestry}. Caracteres são hexadecimais (base 16), sendo possível até 16 colunas. O número da linha representa o dígito e o número da coluna o valor do caracter na posição do dígito}
+	\label{mapa_vizinhaca_tapestry}
+\end{table}
+
+No mapa da tabela~\ref{mapa_vizinhaca_tapestry}, temos os nós separados por linhas e colunas. Iniciando na primeira linha, podemos verificar que o primeiro dígito de todos os elementos da linha representa o valor correspondente na coluna. Isto é
+\begin{itemize}
+	\item O primero caracter do registro 1D76 é 1, que corresponde ao valor da sua coluna.
+	\item O primero caracter do registro 27AB é 2, que corresponde ao valor da sua coluna.
+	\item O primero caracter do registro 51E5 é 5, que corresponde ao valor da sua coluna.
+	\item O primero caracter do registro 6FA3 é 6, que corresponde ao valor da sua coluna.
+\end{itemize}
+
+O mesmo raciocício se aplica às demais linhas. Por essa tabela, será possível então o roteamento de objetos ao longo da rede. Na imagem~\ref{fig:roteamento-obj}, podemos verificar um roteamento simples de um objeto documento do nó 4228 para o nó 4377 (será omitido por enquanto o mesmo objeto do nó AA93). O primeiro salto de envio verifica o primeiro dígito do \emph{receiver id}, consulta na tabela de vizinhos e faz o envio. No caso, 4228 olha o dígito 1 do id do destino 4377 e em seguida faz o envio para 43FE. Em 43FE ele faz o mesmo procedimento, mas para o segundo dígito do destino 4377. Ele então envia para 437A. O mesmo ocorre para 437 mas para o terceiro dígito do destino 4377. Ele enfim chega no destino 4377 e o objeto pode ser passado para a aplicação.
+
+\begin{figure}
+	\caption{Roteamento de mensagem ou objeto com os ponteiros localizadores do emissor. Imagem retirada de~\cite{welzi11}}
+	\label{fig:roteamento-obj}
+\end{figure}
+
+É importante notar aqui algumas características da rede~\emph{Tapestry} que vamos observar na imagem~\ref{fig:roteamento-obj}.
+
+A primeira delas é que na rede podem existir múltiplas cópias do mesmo objeto na rede. Na imagem acima, podemos ver que existe o objeto doc com o ID 4377 criado nos nós 4228 e AA93. A segunda característica é a publicação de objetos. Ao longo do roteamento do objeto, mensagens de publicação vão criando \emph{links} do nó atual com o emissor do objeto (representados na figura~\ref{fig:roteamento-obj} pela linha pontilhada). Dessa forma, se uma requisição vier endereçando o nó emissor dito anteriormente, o nó atual irá saber a localização exata do destino devido ao uso do \emph{link} criado anteriormente.
+
+Por exemplo, ainda usando a imagem~\ref{fig:roteamento-obj}, vamos supor uma mensagem saindo do nó 4464 com \emph{receiver id} igual a 4228. O nó irá analisar o primeiro dígito do \emph{receiver id} 4228 e irá enviar ao nó 43FE. O nó olha para o id mensagem chegada e descobre que o seu destino já existe em um link que foi criado anteriormente com a passagem do objeto doc (coincidentemente é o nó anterior, mas poderia ser outros mais distântes). O nó envia então diretamente ao destinatário, sem passar pelos possíveis links do caminho.
+
+A terceira característica é que as vezes podemos ter um nó responsável pelo redirecionamento de objetos/mensagens próximos (endereçam sempre o mesmo destinatário), por exemplo o nó 437A. Esse nó acaba sendo um ponto único de falha, pois sua ausência poderia fragmentar a rede em duas outras redes distintas. O~\emph{Tapestry} então criou uma forma de contornar esse problema: Adicionou vários \emph{roots} responsáveis por esse objeto, de forma a criar vários links. Desta forma, a ausência de um nó não acarretará em problemas.
+
+O~\emph{Tapestry} garante um meio de tolerar falhas na rede. É possível que em ambientes muito dinâmicos e altamente congestionados alguns nós fiquem indisponíveis por certos momentos. Prevendo a indisponibilidade de um nó, essa arquitetura usa uma tabela de vizinhança de outro nó como forma de redundância. Dessa forma será possível destinar mensagens ou objetos a um nó destino mesmo com a ausência de um roteador ausente no caminho.
+
+Além disso, a disponibilidade ou não de um nó é garantida com procedimentos simples do protocolo TCP. O~\emph{Tapestry} faz uso do protocolo TCP enviando sondas para verificar se o nó está disponível ou não. Essas sondas são o TCP Keep Alive, que segundo~\cite{stevens93}, é um mecanismo que envia ou deixa de enviar respostas ICMP caso o host não consiga responder a essa requisição. Se o host estiver indisponível, então o nó passa a usar a redundância até que o nó esteja disponível novamente. Caso não seja possível mais um estabelecimento da conexão, então o host é descartado e outro nó é escolhido para ser uma nova redundância.
+
+Geralmente o~\emph{Tapestry} faz escolhas de nós vizinhos de acordo com parâmetros de proximidade. Por exemplo, um bom parâmetro de proximidade seria o endereço IP, visto que endereços IPs mais próximos poderiam garantir um menor tempo de viagem de pacotes (Round Trip Time - RTT) e possivelmente melhorar a performance da rede.
+
+Existem situações onde o próximo caracter do \emph{receiver id} não existe na tabela de vizinhança do nó. Nesse caso, o~\emph{Tapestry} aplica o ~\emph{Sorrogate Routing}: Deterministicamente o nó irá escolher um próximo elemento na tabela e ele irá avaliar se o id existe ou não neste novo elemento. Caso o novo nó não tenha o id na tabela, um novo nó é eleito até a condição ser aceita. Por exemplo, vamos supor quatro nós: 2716 liga com 4233 que por sua vez liga com 4899 que liga com 4860 que liga-se a uma rede maior. Se uma mensagem de 2716 endereçar 4855, vamos ter a seguinte situação:
+\begin{itemize}
+	\item O primero caracter do registro 4865 é 4, o nó 2716 irá encaminhar para 4233.
+	\item O segundo caracter do registro 4865 é 8, o nó 4233 irá encaminhar para 4899.
+	\item O terceiro caracter do registro 4855 é 5, o nó 4899 não tem esse registro na tabela. Um outro valor é deterministicamente eleito. Como a única opção é 6, ele é escolhido. O nó 4899 irá encaminhar para 4860.
+	\item O nó 4860 irá realizar o encaminhamento da mensagem.
+\end{itemize}
+
+Dessa forma, o~\emph{Tapestry} garante alta disponibilidade da rede sem contudo prejudicar a performance.
+
+\subsubsection{Pastry}
+
+\subsubsection{Kademlia}
+
+\subsubsection{Chord}
+
+\subsubsection{CAN}
+
+\subsubsection{Freenet}
+
+
 \section{JAMA}
 
 O desenvolvimento completo da plataforma JAMA está descrita em~\cite{parise11}. Seu objetivo foi desenvolver uma plataforma de sistemas multiagentes distruibuído e com fraco acoplamento entre os agentes e as camadas mais baixas do sistemas, permitindo assim o desenvolvimento de novas funcionalidades. Essa nova plataforma garante a comunicação dos agentes com as outras entidades do ambiente. Atualmente o JAMA está somente com a parte de comunicação de serviços funcional, necessitando de implementação na parte de suporte a agentes.
+\begin{itemize}
+	\item Tolerância a falhas.
+	\item Balanceamento de carga.
+	\item Escalabilidade da aplicação.
+	\item Descentralização dos serviços nas bordas da rede	.
+\end{itemize}
+
 
 O JAMA foi desenvolvido na linguagem Java e outros frameworks de softwares distrubuidos. Basicamente foi usado tecnologias como o Google Guice (pronunciado juice), que trabalha com injeção de dependências e garante que o código não precise criar objetos diretamente, reduzindo então a dependencia de ``fábricas'' de criações de objetos.
 

@@ -1,4 +1,5 @@
 \backcite {algirdas04}{{vi}{(document)}{Doc-Start}}
+\backcite {welzi11}{{vi}{(document)}{Doc-Start}}
 \backcite {poole98}{{2}{2.1.1}{subsection.2.1.1}}
 \backcite {novig95}{{2}{2.1.2}{subsection.2.1.2}}
 \backcite {wooldridge04}{{3}{2.1.2}{figure.2.1}}
@@ -12,5 +13,9 @@
 \backcite {rudiger02}{{8}{2.3.1}{subsection.2.3.1}}
 \backcite {stevens93}{{8}{2.3.1}{subsection.2.3.1}}
 \backcite {oram01}{{8}{2.3.1}{subsection.2.3.1}}
-\backcite {parise11}{{9}{2.4}{section.2.4}}
-\backcite {parise11}{{10}{2.4.1}{figure.2.3}}
+\backcite {stilling03}{{9}{2.3.1}{subsection.2.3.1}}
+\backcite {rowstron01}{{10}{2.3.3}{section*.9}}
+\backcite {welzi11}{{11}{2.3}{figure.2.3}}
+\backcite {stevens93}{{12}{2.3.3}{figure.2.3}}
+\backcite {parise11}{{13}{2.4}{section.2.4}}
+\backcite {parise11}{{14}{2.4.1}{figure.2.4}}
