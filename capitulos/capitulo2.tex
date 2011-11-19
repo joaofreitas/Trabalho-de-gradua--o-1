@@ -168,6 +168,49 @@ Por outro lado aplicações de alto desempenho veem no P2P um futuro bastante pr
 
 \subsection{Arquitetura}
 
+As redes P2P podem ser dividas de acordo com a sua forma de funcionamento, entre outras palavras, a arquitetura. As principais arquiteturas são: Localização centralizada, baseada em inundação e redes de superposicão. Esta seção tem por objetivo introduzir os principais conceitos dessas arquiteturas.
+
+\subsubsection{Localização centralizada}
+
+As redes com localização centralizada, como o próprio nome diz, possuem um mecanismo central que faz é o responsável por manter informações dos pares na rede. Dessa forma eles são usados como um índice para busca de arquivos na rede.
+
+Quando um usuário tenta se conectar na rede, ele envia suas algumas informações suas para deixarem salvas no servidor central. Em geral informações são o endereço IP e a lista de arquivos a ser compartilhada pelo par que deseja entrar na rede. Então o servidor atualiza os seus dados com as novas informações para que fiquem disponíveis para outros pares na rede.
+
+Quando um par necessita realizar uma busca na rede, ele consulta um arquivo no servidor central. O servidor central, com o conhecimento prévio de cada arquivos em cada par, responde com o endereço IP do host com o arquivo consultado. O par que fez a consulta conecta-se diretamente com o host retornado como resposta e então eles realizam a troca do arquivo.
+
+A vantagem dessa abordagem é que a busca por um arquivo pode ser bem mais rápida do que por outros métodos, visto que uma máquina já irá conhecer todo o conteúdo, sendo muito mais fácil buscá-lo do que nas outras abordagens vistas a seguir. Um outro ponto positivo é a garantia de disponibilidade do dado se ele existir na rede, pois o uso do repositório central garantirá que ele sempre será encontrado.
+
+Porém essa arquitetura possui grandes desvantagens. A primeira delas é que um servidor central é muito vunerável a falhas, o que o caracteriza como ponto único de falha. Ataques de \emph{hackers} ao servidor central podem deixá-lo indisponível, o que ocasiona na parada total da rede visto que os pares não haverá forma de encontrar dados na rede.
+
+O maior exemplo de localização centralizada foi o Napster, possuindo todo o mecanismo que foi explicado acima. Ele também é o maior exemplo de como uma localizacão centralizada pode ser prejudicial. Acusado de diversas violações de patentes, o servidor central do Napster foi fechado e a rede descontinuada.
+
+Existem algumas abordagens onde o servidor central é de certa forma ''descentralizado``. Ao invés de um servidor central, são criados vários servidores centrais. Dessa forma, um ~\emph{host} que deseja fazer uma busca pode conectar-se a vários servidores e a rede não fica totalmente presa a um único ponto de distribuição de dados.
+
+A busca por dados é feita de forma iterativa nos servidores centrais: Cada um deles verifica se existe ou não o arquivo procurado nos seus dados. Ao invés de receber apenas um endereço IP, o \emph{host} que fez a busca recebe uma lista de endereços dos servidores centrais.
+Um exemplo de programa que faz uso dessa rede é o Edonkey, que após o Napster surgiu como uma gigante de compartilhamento de dados.
+
+\subsubsection{Baseada em inundação}
+
+Redes baseadas em inundação são completamente descentralizadas, não possuem um ponto único de falha. Quando um \emph{host x} deseja participar da rede, ele manda uma mensagem broadcast para todos os elementos da rede. Se existirem pares participantes na mesma rede que ele, então os os \emph{hosts} que responderam passam a considerar \emph{x} como um integrante da rede.
+
+O mecanismo de busca ocorre de forma a inundar toda a rede com requisição. Esse mecanismo faz uso também de um recurso do protocolo TCP, o TTL. De acordo com~\cite{stevens93}, o TTL é um contador de quantas vezes uma requisição passou de um roteador para outro. O TTL é iniciado com um valor (o padrão é 64) e cada vez que passa de um roteador (ou máquina) para outro o TTL é decrementado. Quando o TTL chegar em 0, a requisição é descartada e o emissor da requisição é notificado.
+
+Quando um nó envia para os seus vizinhos uma requisicão de arquivo ou serviço, os seus vizinhos verificam se possuem o conteúdo desejado. Caso não exista em em seus arquivos, o TTL é decrementado e essa requisição é repassada aos vizinhos dos vizinhos. Esse procedimento é repetido até que haja alguma resposta ou o TTL seja igual a 0. A imagem~\ref{flooding-architecture} exemplifica uma situação de busca.
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.75]{images/flooding-architecture.png}
+	\caption{Busca por inundação. O nó azul origina a requisição. Ela trafega pelos outros nós na rede (com circuferências vermelhas) até chegar nó com o conteúdo da requisição que realiza a resposta (com um ponto vermelho no meio). Os nós com três argolas são nós em que o TTL chegou em 0. Imagem retirada de~\cite{dovalScalable01}.}
+	\label{fig:flooding-architecture}
+\end{figure}
+
+Essa abordagem porém possui diversas desvantagens. Podemos notar que a probabilidade de congestionamento da rede é muito alta. Diversas requisições de buscas podem ser disparadas por vários nós, o que pode rapidamente sobrecarregar a rede com tantos pedidos. Ou seja, essa abordagem exige uma alta capacidade de processamento, além de exigir muita largura de banda.
+
+Outro problema visível é que não é garantido a disponibilidade de arquivos na rede. Supondo um caso onde um arquivo a ser encontrado está mais longe do que o TTL ou do tempo necessário para encontrá-lo, ocasionará a indisponibilidade dele para aquele nó.
+
+Artigo de freenet~\cite{ian02}
+\subsubsection{Redes de superposicão}
+
 \subsection{Roteamento}
 
 \subsubsection{Plaxton}
@@ -180,7 +223,7 @@ A rede \emph{Plaxton} consiste em uma estrutura de dados de objetos distribuído
 	\item \emph{Plaxton Mesh} - Representa a estrutura de dados da rede.
 \end{itemize}
 
-O uso dessa estrutura garante um tempo rápido de entrega das mensagens nos roteadores. Entretanto é importante ressaltar que existem alguns pontos negativos nessa arquitetura. A primeira delas é que a rede é fixa. Ou seja, durante o seu funcionamento não é permitido a inserção ou a remoção de mais nós na rede, visto que um nó será responsável por conhecer todo um caminho e sua ausência implicaria na perda de parte da rede. Além disso, a dere \emph{plaxton} requer a existência de um nó raiz que irá conhecer todos os objetos. Logo a rede possui um ponto único de falha, ou seja, um elemento crítico na rede que caso ocorra uma falha, toda a rede para de funcionar.
+O uso dessa estrutura garante um tempo rápido de entrega das mensagens nos roteadores. Entretanto é importante ressaltar que existem alguns pontos negativos nesse algoritmo. A primeira delas é que a rede é fixa. Ou seja, durante o seu funcionamento não é permitido a inserção ou a remoção de mais nós na rede, visto que um nó será responsável por conhecer todo um caminho e sua ausência implicaria na perda de parte da rede. Além disso, a dere \emph{plaxton} requer a existência de um nó raiz que irá conhecer todos os objetos. Logo a rede possui um ponto único de falha, ou seja, um elemento crítico na rede que caso ocorra uma falha, toda a rede para de funcionar.
 
 O mecanismo de roteamento do \emph{plaxton} cria em cada nó mapas de roteamento locais, também chamados de mapas de vizinhança, que são responsáveis por rotear as mensagens até o seu destino (\emph{destination id}). Esses mapas possuem várias camadas, digamos x camadas, cada uma com um número y de entradas iguais a base do ID. A busca do próximo nó consiste em buscar o próximo dígito do local de destino nos n+1 níveis do mapa uma entrada j em uma camada i.
 
@@ -272,16 +315,56 @@ A figura~\ref{fig:roteamento-pastry} exemplifica um o roteamento de uma mensagem
 
 A arquitetura \emph{Kademlia} foi criada pelos pesquisadores~\emph{Petar Maymounkov e David Mazières}. De acordo com o seu artigo~\cite{maymounkov02}, o \emph{Kademlia} usa DHT para gerênciamento dos pares e possui um número desejavel de características que não estão presentes nas arquiteturas explicadas anteriormente.
 
-Basicamente a arquitetura possui grandes benefícios devido ao uso de uma métrica baseada na operação binária XOR para medir a distância entre dos nós na rede. Devido ao fator assimétrico, XOR garante ao \emph{Kademlia} saber informações importantes sobre rotas de consultas que ele recebe, além disso construindo tabelas de roteamento rígidas.
+Basicamente a arquitetura possui grandes benefícios devido ao uso de uma métrica baseada na operação binária XOR (Ou exclusivo) para medir a distância entre dos nós na rede. Devido ao fator assimétrico, XOR garante ao \emph{Kademlia} saber informações importantes sobre rotas de consultas que ele recebe, além disso construindo tabelas de roteamento rígidas.
 
-O funcionamento do \emph{Kademlia} assemelha-se com o Pastry. Ele trata os nós como folhas em uma árvore
+O funcionamento do \emph{Kademlia} assemelha-se com o Pastry. Ele trata os nós como folhas em uma árvore binária, dessa forma o percorrimento do nó raiz até uma folha garante um id único para cada nó na rede. A figura~\ref{fig:arvore-kademlia}, que mostra que o percorrimento da raiz até o ponto preto atribui uma chave 0011 ao nó.
+
+Para todos os nós dados, o~\emph{Kademlia} divide a árvore em sucessivas subárvores menores que não contém o nó. A forma da divisão da árvore consiste em:
+\begin{itemize}
+	\item Dividir a árvore em uma subárvore que conterá metade dos nós da árvore. Essa será a maior subárvore.
+	\item Em seguida, dividir em mais uma subárvore que contenha a metade dos nós restantes na árvore.
+	\item Proseguir com o método até a divisão completa da árvore.
+\end{itemize}
+O~\emph{Kademlia} garante que um nó conhece pelo menos um nó em cada uma das subárvores geradas. Dessa forma, é possível a localização de qualquer nó a partir do seu id. Na imagem~\ref{fig:arvore-kademlia} é possível verificar a criação de 4 subárvores: A primeira, com a metade da haste direita do nó raiz (prefixo 1). Em seguida a metade esquerda do nó 0 (prefixo 01). Temos os outros prefixos 0010 e 000.
+
+Conforme dito anteriormente, cada nó na rede possui um identificador único (\emph{nodeId}) de 160 bits, que é gerado aleatóriamente para cada par. As mensagens roteadas pela rede contém junto a si o \emph{nodeId} para que o nó que esteja roteando a mensagem saiba da existência do emissor e grave este \emph{nodeId} caso necessário. As chaves também são 160 bits.
 
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.5]{images/arvore-kademlia.png}
-	\caption{Árvore binária do \emph{Kademlia}. O Ponto preto é o nó 0011, as elipses são os pares que 0011 provavelmente tem contato. Imagem retirada de~\cite{welzi11}}
+	\caption{Árvore binária do \emph{Kademlia} com chaves num espaço de 160 bits. O Ponto preto é o nó 0011, as elipses são os pares que 0011 provavelmente tem contato. Imagem retirada de~\cite{welzi11}}
 	\label{fig:arvore-kademlia}
 \end{figure}
+
+Dados dois nós na rede,~\emph{x} e ~\emph{y}, o ~\emph{Kademlia} define a distância desses dois nós como sendo o XOR entre os seus respectivos ~\emph{nodeIds}, ou seja, um valor numérico definido como ~\emph{d(x, y)} =~\emph{x} $\oplus$ \emph{y}.
+
+A operação XOR adiciona algumas características interessantes na rede:
+\begin{itemize}
+	\item ~\emph{d(x, x)} = 0 e ~\emph{d(x, y)} > 0.
+	\item Simetria: ~\emph{d(x, y)} = ~\emph{d(y, x)} para todo \emph{x} diferente de \emph{y}.
+	\item Desigualdade do triângulo:~\emph{d(x, y)} +~\emph{d(y, z)} $\ge$ ~\emph{d(x, z)}
+\end{itemize}
+
+A operação XOR constrói uma árvore que assemelha-se a um esboço da rede e passa então a distância entre dois nós. Quando uma árvore binária está completa (com o seu tamanho de 160 bits completamente preenchido), a magnitude da distância entre dóis nós pode ser compreendido através da menor subárvore que contém as chaves dos dois nós. Caso a árvore não esteje completa, a noção de distância entre uma folha mais próxima de um id x é o caminho que contém o maior números de dígitos semelhantes a x.
+
+Além disso, o XOR é unidirecional. Dado um ponto \emph{x} e uma distância \emph{d} qualquer, existe um ponto \emph{y} que a sua distância para \emph{x} é exatamente igual a \emph{d}. Isso significa que a busca por uma mesma chave sempre irá convergir em caminhos iguais, independente do nó que originou a busca.
+
+A tabela de roteamento do~\emph{Kademlia} é simples comparado com a dificuldade de balanceamento da árvore binária. Em geral, a tabela consiste em uma árvore binária, com folhas sendo~\emph{k-buckets}. Cada~\emph{k-bucket} cobre uma área de~\emph{nodeId} com prefixo em comum e todos os ~\emph{k-buckets} juntos combrem os 160 bits dos~\emph{nodesIds}.
+
+Na árvore de roteamento, os nós são alocados dinamicamente. Inicialmente a árvore começa vazia. Quando o primeiro nó for inserido na rede, digamos um nó \emph{u}, a árvore terá apenas um \emph{k-bucket} cobrindo todo o espaço da chave de 160 bits.
+
+Quando o nó \emph{u} aprende um novo nó na rede, ele irá tentar colocá-lo na sua tabela de roteamento. De acordo com o seu~\emph{nodeId}, ele irá fazer o posicionamento na árvore. Em seguida tentará inserí-lo na árvore. Se aquele \emph{bucket} não estiver cheio, ele é simplesmete inserido. Caso contrário, o \emph{bucket} é divido em dois outros nós e os seus conteúdos são divididos entre os dois novos nós. Esse processo ocorre repetidamente até a rede ser toda descoberta ou então o limite de 160 bits for completamente preenchido. Caso isso ocorra, um novo nó é simplesmente descartado. A figura~\ref{fig:kademlia-k-bucket} exemplifica todo o processo explicado.
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.5]{images/kademlia-k-bucket.png}
+	\caption{Evolução da árvore binária de roteamento no \emph{Kademlia} com chaves num espaço de 160 bits. Cada novo nó é dividido em um novo \emph{k-bucket}}.
+	\label{fig:kademlia-k-bucket}
+\end{figure}
+
+Na figura~\ref{fig:kademlia-k-bucket} o primeiro \emph{k-bucket} inserido e ele ocupa os 160 bits. Na linha abaixo, quando um novo nó é descoberto o único \emph{bucket} é divido em outros dois e os seus conteúdos são divididos na rede. Um novo nó \emph{nodeId} de prefixo 00 é encontrado na rede e na linha 3 ele é inserido à direita do nó raiz. Novamente o seus conteúdos são divididos em dois e novos \emph{buckets} são criados. O processo é repetido para cada novo nó na rede.
+
+Como dito anteriormente, uma das dificuldades é o balanceamento da árvore. Caso ocorra a situação, o \emph{Kademlia} tenta contornar isso de forma a manter uma lista com todos os contatos válidos para evitar problemas de notificação dos nós na árvore.
 
 \subsubsection{Chord}
 

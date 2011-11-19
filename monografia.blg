@@ -5,45 +5,45 @@ Database file #1: bibliografia.bib
 Warning--there's a number but no series in oram01
 Warning--there's a number but no series in novig95
 Warning--there's a number but no series in wooldridge04
-You've used 14 entries,
+You've used 16 entries,
             2118 wiz_defined-function locations,
-            579 strings with 6331 characters,
-and the built_in function-call counts, 3659 in all, are:
-= -- 368
-> -- 143
+            592 strings with 6678 characters,
+and the built_in function-call counts, 4376 in all, are:
+= -- 440
+> -- 184
 < -- 4
-+ -- 60
-- -- 44
-* -- 219
-:= -- 646
-add.period$ -- 46
-call.type$ -- 14
-change.case$ -- 59
++ -- 76
+- -- 58
+* -- 278
+:= -- 770
+add.period$ -- 52
+call.type$ -- 16
+change.case$ -- 72
 chr.to.int$ -- 0
-cite$ -- 17
-duplicate$ -- 150
-empty$ -- 300
-format.name$ -- 44
-if$ -- 760
+cite$ -- 19
+duplicate$ -- 172
+empty$ -- 348
+format.name$ -- 58
+if$ -- 901
 int.to.chr$ -- 0
-int.to.str$ -- 14
-missing$ -- 15
-newline$ -- 73
-num.names$ -- 28
-pop$ -- 66
+int.to.str$ -- 16
+missing$ -- 17
+newline$ -- 83
+num.names$ -- 32
+pop$ -- 75
 preamble$ -- 1
-purify$ -- 50
+purify$ -- 61
 quote$ -- 0
-skip$ -- 94
+skip$ -- 109
 stack$ -- 0
-substring$ -- 162
-swap$ -- 21
+substring$ -- 210
+swap$ -- 23
 text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 46
+type$ -- 54
 warning$ -- 3
-while$ -- 38
-width$ -- 16
-write$ -- 154
+while$ -- 46
+width$ -- 18
+write$ -- 176
 (There were 3 warnings)

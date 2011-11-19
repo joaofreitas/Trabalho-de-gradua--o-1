@@ -12,18 +12,21 @@
 \contentsline {section}{\numberline {2.3}Sistemas Distribu\IeC {\'\i }dos}{7}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Introdu\IeC {\c c}\IeC {\~a}o}{7}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}Arquitetura}{9}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}Roteamento}{9}{subsection.2.3.3}
-\contentsline {subsubsection}{Plaxton}{9}{section*.8}
-\contentsline {subsubsection}{Tapestry}{10}{section*.9}
-\contentsline {subsubsection}{Pastry}{13}{section*.10}
-\contentsline {subsubsection}{Kademlia}{13}{section*.11}
-\contentsline {subsubsection}{Chord}{14}{section*.12}
-\contentsline {subsubsection}{CAN}{14}{section*.13}
-\contentsline {subsubsection}{Freenet}{14}{section*.14}
-\contentsline {section}{\numberline {2.4}JAMA}{14}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Ambiente}{15}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}Adaptador de rede}{16}{subsection.2.4.2}
-\contentsline {subsection}{\numberline {2.4.3}Barramento de eventos}{16}{subsection.2.4.3}
-\contentsline {subsection}{\numberline {2.4.4}Agente}{16}{subsection.2.4.4}
-\contentsline {section}{\numberline {2.5}Desafios desse trabalho}{17}{section.2.5}
-\contentsline {chapter}{Refer\^encias}{18}{section*.15}
+\contentsline {subsubsection}{Localiza\IeC {\c c}\IeC {\~a}o centralizada}{9}{section*.8}
+\contentsline {subsubsection}{Baseada em inunda\IeC {\c c}\IeC {\~a}o}{10}{section*.9}
+\contentsline {subsubsection}{Redes de superposic\IeC {\~a}o}{11}{section*.10}
+\contentsline {subsection}{\numberline {2.3.3}Roteamento}{11}{subsection.2.3.3}
+\contentsline {subsubsection}{Plaxton}{11}{section*.11}
+\contentsline {subsubsection}{Tapestry}{12}{section*.12}
+\contentsline {subsubsection}{Pastry}{15}{section*.13}
+\contentsline {subsubsection}{Kademlia}{15}{section*.14}
+\contentsline {subsubsection}{Chord}{18}{section*.15}
+\contentsline {subsubsection}{CAN}{18}{section*.16}
+\contentsline {subsubsection}{Freenet}{18}{section*.17}
+\contentsline {section}{\numberline {2.4}JAMA}{18}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Ambiente}{19}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Adaptador de rede}{20}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}Barramento de eventos}{20}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.4}Agente}{20}{subsection.2.4.4}
+\contentsline {section}{\numberline {2.5}Desafios desse trabalho}{21}{section.2.5}
+\contentsline {chapter}{Refer\^encias}{22}{section*.18}
