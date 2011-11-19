@@ -7,4 +7,5 @@
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Dependabilidade, seguran\IeC {\c c}a e seus atributos em comum. Fonte:~\cite {algirdas04}}}{7}{figure.2.2}
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Roteamento de mensagem ou objeto com os ponteiros localizadores do emissor. Imagem retirada de~\cite {welzi11}}}{11}{figure.2.3}
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Roteamento de mensagem na rede pastry do nodo 64a1fc. Imagem retirada de~\cite {rowstron01}}}{13}{figure.2.4}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Ambiente distriu\IeC {\'\i }do no JAMA. Os agentes n\IeC {\~a}o se comunicam diretamente.}}{14}{figure.2.5}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces \IeC {\'A}rvore bin\IeC {\'a}ria do \emph {Kademlia}. O Ponto preto \IeC {\'e} o n\IeC {\'o} 0011, as elipses s\IeC {\~a}o os pares que 0011 provavelmente tem contato. Imagem retirada de~\cite {welzi11}}}{14}{figure.2.5}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Ambiente distriu\IeC {\'\i }do no JAMA. Os agentes n\IeC {\~a}o se comunicam diretamente.}}{15}{figure.2.6}

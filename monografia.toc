@@ -15,15 +15,15 @@
 \contentsline {subsection}{\numberline {2.3.3}Roteamento}{9}{subsection.2.3.3}
 \contentsline {subsubsection}{Plaxton}{9}{section*.8}
 \contentsline {subsubsection}{Tapestry}{10}{section*.9}
-\contentsline {subsubsection}{Pastry}{12}{section*.10}
+\contentsline {subsubsection}{Pastry}{13}{section*.10}
 \contentsline {subsubsection}{Kademlia}{13}{section*.11}
-\contentsline {subsubsection}{Chord}{13}{section*.12}
-\contentsline {subsubsection}{CAN}{13}{section*.13}
-\contentsline {subsubsection}{Freenet}{13}{section*.14}
-\contentsline {section}{\numberline {2.4}JAMA}{13}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Ambiente}{14}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}Adaptador de rede}{15}{subsection.2.4.2}
-\contentsline {subsection}{\numberline {2.4.3}Barramento de eventos}{15}{subsection.2.4.3}
-\contentsline {subsection}{\numberline {2.4.4}Agente}{15}{subsection.2.4.4}
-\contentsline {section}{\numberline {2.5}Desafios desse trabalho}{16}{section.2.5}
-\contentsline {chapter}{Refer\^encias}{17}{section*.15}
+\contentsline {subsubsection}{Chord}{14}{section*.12}
+\contentsline {subsubsection}{CAN}{14}{section*.13}
+\contentsline {subsubsection}{Freenet}{14}{section*.14}
+\contentsline {section}{\numberline {2.4}JAMA}{14}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Ambiente}{15}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Adaptador de rede}{16}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}Barramento de eventos}{16}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.4}Agente}{16}{subsection.2.4.4}
+\contentsline {section}{\numberline {2.5}Desafios desse trabalho}{17}{section.2.5}
+\contentsline {chapter}{Refer\^encias}{18}{section*.15}

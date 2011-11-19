@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.10.31)  18 NOV 2011 19:55
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.10.31)  19 NOV 2011 10:52
 entering extended mode
  %&-line parsing enabled.
 **monografia.tex
@@ -679,7 +679,7 @@ Cap\'{\i }tulo 1.
 Cap\'{\i }tulo 2.
 [2
 
-] <images/agente-basico.png, id=213, 280.04625pt x 177.66376pt>
+] <images/agente-basico.png, id=217, 280.04625pt x 177.66376pt>
 File: images/agente-basico.png Graphic file (type png)
 
 <use images/agente-basico.png>
@@ -746,20 +746,28 @@ Overfull \hbox (3.09444pt too wide) in paragraph at lines 48--59
  []
 
 [4] [5] [6]
-<images/dependabilidade-seguranca.png, id=243, 358.33875pt x 153.57375pt>
+<images/dependabilidade-seguranca.png, id=247, 358.33875pt x 153.57375pt>
 File: images/dependabilidade-seguranca.png Graphic file (type png)
 
 <use images/dependabilidade-seguranca.png> [7 <./images/dependabilidade-seguran
-ca.png (PNG copy)>] [8] [9] [10] [11]
-<images/roteamento-pastry.png, id=291, 489.83pt x 439.6425pt>
+ca.png (PNG copy)>] [8] [9] [10]
+<images/rede-tapestry.png, id=284, 556.0775pt x 248.93pt>
+File: images/rede-tapestry.png Graphic file (type png)
+
+<use images/rede-tapestry.png> [11 <./images/rede-tapestry.png (PNG copy)>]
+[12] <images/roteamento-pastry.png, id=300, 489.83pt x 439.6425pt>
 File: images/roteamento-pastry.png Graphic file (type png)
 
-<use images/roteamento-pastry.png> [12] [13 <./images/roteamento-pastry.png>]
-<images/ambiente.png, id=313, 369.38pt x 137.51375pt>
+<use images/roteamento-pastry.png> [13 <./images/roteamento-pastry.png>]
+<images/arvore-kademlia.png, id=314, 559.08875pt x 274.02374pt>
+File: images/arvore-kademlia.png Graphic file (type png)
+
+<use images/arvore-kademlia.png> [14 <./images/arvore-kademlia.png (PNG copy)>]
+<images/ambiente.png, id=327, 369.38pt x 137.51375pt>
 File: images/ambiente.png Graphic file (type png)
 
-<use images/ambiente.png> [14 <./images/ambiente.png (PNG copy)>] [15])
-[16] (./monografia.bbl (./monografia.brf)
+<use images/ambiente.png> [15 <./images/ambiente.png (PNG copy)>] [16])
+[17] (./monografia.bbl (./monografia.brf)
 \tf@brf=\write7
 \openout7 = `monografia.brf'.
 
@@ -784,13 +792,13 @@ l em
 
 Underfull \hbox (badness 1769) in paragraph at lines 21--21
 \T1/cmr/m/n/12 http://monografias.cic.unb.br/dspace/handle/123456789/316, Março
- 2011.  [][]13[][],
+ 2011.  [][]14[][],
  []
 
-[17
+[18
 
 
-]) [18] (./monografia.aux)
+]) [19] (./monografia.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.74pt have occurred.
@@ -801,13 +809,13 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
  )
 (\end occurred when \iffalse on line 462 was incomplete) 
 Here is how much of TeX's memory you used:
- 7019 strings out of 495041
- 96224 string characters out of 1181896
- 193298 words of memory out of 3000000
- 9958 multiletter control sequences out of 15000+50000
+ 7041 strings out of 495041
+ 96693 string characters out of 1181896
+ 191298 words of memory out of 3000000
+ 9975 multiletter control sequences out of 15000+50000
  16227 words of font info for 36 fonts, out of 3000000 for 9000
  30 hyphenation exceptions out of 8191
- 45i,10n,69p,854b,461s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 45i,10n,69p,854b,457s stack positions out of 5000i,500n,10000p,200000b,50000s
  </home/joaofreitas/.te
 xmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </home/joaofreitas/.texmf-v
 ar/fonts/pk/ljfour/jknappen/ec/ecti1095.600pk> </home/joaofreitas/.texmf-var/fo
@@ -820,9 +828,9 @@ en/ec/ecrm1200.600pk> </home/joaofreitas/.texmf-var/fonts/pk/ljfour/jknappen/ec
 1728.600pk> </home/joaofreitas/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.
 600pk> </home/joaofreitas/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2074.600pk
 ></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on monografia.pdf (28 pages, 308586 bytes).
+Output written on monografia.pdf (29 pages, 382833 bytes).
 PDF statistics:
- 834 PDF objects out of 1000 (max. 8388607)
- 84 named destinations out of 1000 (max. 500000)
- 210 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 852 PDF objects out of 1000 (max. 8388607)
+ 87 named destinations out of 1000 (max. 500000)
+ 220 words of extra memory for PDF output out of 10000 (max. 10000000)
 

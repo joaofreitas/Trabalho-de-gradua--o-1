@@ -220,19 +220,20 @@ No mapa da tabela~\ref{mapa_vizinhaca_tapestry}, temos os nós separados por lin
 	\item O primero caracter do registro 6FA3 é 6, que corresponde ao valor da sua coluna.
 \end{itemize}
 
-O mesmo raciocício se aplica às demais linhas. Por essa tabela, será possível então o roteamento de objetos ao longo da rede. Na imagem~\ref{fig:roteamento-obj}, podemos verificar um roteamento simples de um objeto documento do nó 4228 para o nó 4377 (será omitido por enquanto o mesmo objeto do nó AA93). O primeiro salto de envio verifica o primeiro dígito do \emph{receiver id}, consulta na tabela de vizinhos e faz o envio. No caso, 4228 olha o dígito 1 do id do destino 4377 e em seguida faz o envio para 43FE. Em 43FE ele faz o mesmo procedimento, mas para o segundo dígito do destino 4377. Ele então envia para 437A. O mesmo ocorre para 437 mas para o terceiro dígito do destino 4377. Ele enfim chega no destino 4377 e o objeto pode ser passado para a aplicação.
+O mesmo raciocício se aplica às demais linhas. Por essa tabela, será possível então o roteamento de objetos ao longo da rede. Na imagem~\ref{fig:rede-tapestry}, podemos verificar um roteamento simples de um objeto documento do nó 4228 para o nó 4377 (será omitido por enquanto o mesmo objeto do nó AA93). O primeiro salto de envio verifica o primeiro dígito do \emph{receiver id}, consulta na tabela de vizinhos e faz o envio. No caso, 4228 olha o dígito 1 do id do destino 4377 e em seguida faz o envio para 43FE. Em 43FE ele faz o mesmo procedimento, mas para o segundo dígito do destino 4377. Ele então envia para 437A. O mesmo ocorre para 437 mas para o terceiro dígito do destino 4377. Ele enfim chega no destino 4377 e o objeto pode ser passado para a aplicação.
 
 \begin{figure}
 	\centering
+	\includegraphics[scale=0.6]{images/rede-tapestry.png}
 	\caption{Roteamento de mensagem ou objeto com os ponteiros localizadores do emissor. Imagem retirada de~\cite{welzi11}}
-	\label{fig:roteamento-obj}
+	\label{fig:rede-tapestry}
 \end{figure}
 
-É importante notar aqui algumas características da rede~\emph{Tapestry} que vamos observar na imagem~\ref{fig:roteamento-obj}.
+É importante notar aqui algumas características da rede~\emph{Tapestry} que vamos observar na imagem~\ref{fig:rede-tapestry}.
 
-A primeira delas é que na rede podem existir múltiplas cópias do mesmo objeto na rede. Na imagem acima, podemos ver que existe o objeto doc com o ID 4377 criado nos nós 4228 e AA93. A segunda característica é a publicação de objetos. Ao longo do roteamento do objeto, mensagens de publicação vão criando \emph{links} do nó atual com o emissor do objeto (representados na figura~\ref{fig:roteamento-obj} pela linha pontilhada). Dessa forma, se uma requisição vier endereçando o nó emissor dito anteriormente, o nó atual irá saber a localização exata do destino devido ao uso do \emph{link} criado anteriormente.
+A primeira delas é que na rede podem existir múltiplas cópias do mesmo objeto na rede. Na imagem acima, podemos ver que existe o objeto doc com o ID 4377 criado nos nós 4228 e AA93. A segunda característica é a publicação de objetos. Ao longo do roteamento do objeto, mensagens de publicação vão criando \emph{links} do nó atual com o emissor do objeto (representados na figura~\ref{fig:rede-tapestry} pela linha pontilhada). Dessa forma, se uma requisição vier endereçando o nó emissor dito anteriormente, o nó atual irá saber a localização exata do destino devido ao uso do \emph{link} criado anteriormente.
 
-Por exemplo, ainda usando a imagem~\ref{fig:roteamento-obj}, vamos supor uma mensagem saindo do nó 4464 com \emph{receiver id} igual a 4228. O nó irá analisar o primeiro dígito do \emph{receiver id} 4228 e irá enviar ao nó 43FE. O nó olha para o id mensagem chegada e descobre que o seu destino já existe em um link que foi criado anteriormente com a passagem do objeto doc (coincidentemente é o nó anterior, mas poderia ser outros mais distântes). O nó envia então diretamente ao destinatário, sem passar pelos possíveis links do caminho.
+Por exemplo, ainda usando a imagem~\ref{fig:rede-tapestry}, vamos supor uma mensagem saindo do nó 4464 com \emph{receiver id} igual a 4228. O nó irá analisar o primeiro dígito do \emph{receiver id} 4228 e irá enviar ao nó 43FE. O nó olha para o id mensagem chegada e descobre que o seu destino já existe em um link que foi criado anteriormente com a passagem do objeto doc (coincidentemente é o nó anterior, mas poderia ser outros mais distântes). O nó envia então diretamente ao destinatário, sem passar pelos possíveis links do caminho.
 
 A terceira característica é que as vezes podemos ter um nó responsável pelo redirecionamento de objetos/mensagens próximos (endereçam sempre o mesmo destinatário), por exemplo o nó 437A. Esse nó acaba sendo um ponto único de falha, pois sua ausência poderia fragmentar a rede em duas outras redes distintas. O~\emph{Tapestry} então criou uma forma de contornar esse problema: Adicionou vários \emph{roots} responsáveis por esse objeto, de forma a criar vários links. Desta forma, a ausência de um nó não acarretará em problemas.
 
@@ -267,9 +268,20 @@ De acordo com~\cite{rowstron01}, a arquitetura \emph{pastry} possui a seguinte c
 
 A figura~\ref{fig:roteamento-pastry} exemplifica um o roteamento de uma mensagem do nodo 64a1fc até o nodo d467c4. Em cada salto, a rede preocupa-se em encontrar um caminho mínimo para a entrega da mensagem.
 
-Como dito anteriormente, 
-
 \subsubsection{Kademlia}
+
+A arquitetura \emph{Kademlia} foi criada pelos pesquisadores~\emph{Petar Maymounkov e David Mazières}. De acordo com o seu artigo~\cite{maymounkov02}, o \emph{Kademlia} usa DHT para gerênciamento dos pares e possui um número desejavel de características que não estão presentes nas arquiteturas explicadas anteriormente.
+
+Basicamente a arquitetura possui grandes benefícios devido ao uso de uma métrica baseada na operação binária XOR para medir a distância entre dos nós na rede. Devido ao fator assimétrico, XOR garante ao \emph{Kademlia} saber informações importantes sobre rotas de consultas que ele recebe, além disso construindo tabelas de roteamento rígidas.
+
+O funcionamento do \emph{Kademlia} assemelha-se com o Pastry. Ele trata os nós como folhas em uma árvore
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.5]{images/arvore-kademlia.png}
+	\caption{Árvore binária do \emph{Kademlia}. O Ponto preto é o nó 0011, as elipses são os pares que 0011 provavelmente tem contato. Imagem retirada de~\cite{welzi11}}
+	\label{fig:arvore-kademlia}
+\end{figure}
 
 \subsubsection{Chord}
 
