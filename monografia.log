@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.10.31)  19 NOV 2011 19:35
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.10.31)  20 NOV 2011 01:03
 entering extended mode
  %&-line parsing enabled.
 **monografia.tex
@@ -258,21 +258,90 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 )
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip45
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf-texlive/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks18
+\ex@=\dimen113
+))
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen114
+)
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count105
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count106
+\leftroot@=\count107
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count108
+\DOTSCASE@=\count109
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box28
+\strutbox@=\box29
+\big@size=\dimen115
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count110
+\c@MaxMatrixCols=\count111
+\dotsspace@=\muskip11
+\c@parentequation=\count112
+\dspbrk@lvl=\count113
+\tag@help=\toks19
+\row@=\count114
+\column@=\count115
+\maxfields@=\count116
+\andhelp@=\toks20
+\eqnshift@=\dimen116
+\alignsep@=\dimen117
+\tagshift@=\dimen118
+\tagwidth@=\dimen119
+\totwidth@=\dimen120
+\lineht@=\dimen121
+\@envbody=\toks21
+\multlinegap=\skip46
+\multlinetaggap=\skip47
+\mathdisplay@stack=\toks22
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
 (/usr/share/texmf-texlive/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2009/06/22 v3.00
 
 (/usr/share/texmf-texlive/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
-\@emptytoks=\toks18
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
 ))
+(/usr/share/texmf-texlive/tex/latex/amscls/amsthm.sty
+Package: amsthm 2004/08/06 v2.20
+\thm@style=\toks23
+\thm@bodyfont=\toks24
+\thm@headfont=\toks25
+\thm@notefont=\toks26
+\thm@headpunct=\toks27
+\thm@preskip=\skip48
+\thm@postskip=\skip49
+\thm@headsep=\skip50
+\dth@everypar=\toks28
+)
 (/usr/share/texmf-texlive/tex/latex/base/inputenc.sty
 Package: inputenc 2008/03/30 v1.1d Input encoding file
-\inpenc@prehook=\toks19
-\inpenc@posthook=\toks20
+\inpenc@prehook=\toks29
+\inpenc@posthook=\toks30
 
 (/usr/share/texmf-texlive/tex/latex/base/utf8.def
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
@@ -488,55 +557,55 @@ Now handling font encoding PD1 ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 )) (./cores.tex)
-Package hyperref Info: Option `colorlinks' set `true' on input line 44.
+Package hyperref Info: Option `colorlinks' set `true' on input line 43.
 
 (./monografia.aux)
 \openout1 = `monografia.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-Package hyperref Info: Link coloring ON on input line 73.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+Package hyperref Info: Link coloring ON on input line 72.
  (/usr/share/texmf-texlive/tex/latex/hyperref/nameref.sty
 Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
 
 (/usr/share/texmf-texlive/tex/latex/oberdiek/refcount.sty
 Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
 )
-\c@section@level=\count105
+\c@section@level=\count117
 )
-LaTeX Info: Redefining \ref on input line 73.
-LaTeX Info: Redefining \pageref on input line 73.
+LaTeX Info: Redefining \ref on input line 72.
+LaTeX Info: Redefining \pageref on input line 72.
  (./monografia.out)
 (./monografia.out)
 \@outlinefile=\write3
 \openout3 = `monografia.out'.
 
-Package backref Info: ** backref set up for natbib ** on input line 73.
-\AtBeginShipoutBox=\box28
+Package backref Info: ** backref set up for natbib ** on input line 72.
+\AtBeginShipoutBox=\box30
  (/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count106
-\scratchdimen=\dimen113
-\scratchbox=\box29
-\nofMPsegments=\count107
-\nofMParguments=\count108
-\everyMPshowfont=\toks21
-\MPscratchCnt=\count109
-\MPscratchDim=\dimen114
-\MPnumerator=\count110
-\everyMPtoPDFconversion=\toks22
+\scratchcounter=\count118
+\scratchdimen=\dimen122
+\scratchbox=\box31
+\nofMPsegments=\count119
+\nofMParguments=\count120
+\everyMPshowfont=\toks31
+\MPscratchCnt=\count121
+\MPscratchDim=\dimen123
+\MPnumerator=\count122
+\everyMPtoPDFconversion=\toks32
 )
 *geometry auto-detecting driver*
 *geometry detected driver: pdftex*
@@ -585,64 +654,64 @@ Package: hypernat 2001/07/09 v1.0b hyperref and natbib compatibility (jb)
 (/usr/share/texmf-texlive/tex/latex/oberdiek/hypcap.sty
 Package: hypcap 2008/09/08 v1.10 Adjusting anchors of captions (HO)
 )
-\len@brasiliaw=\skip45
-\len@uadesch=\skip46
-\len@uacaph=\skip47
-LaTeX Font Info:    Try loading font information for T1+ua1 on input line 74.
-LaTeX Font Info:    No file T1ua1.fd. on input line 74.
+\len@brasiliaw=\skip51
+\len@uadesch=\skip52
+\len@uacaph=\skip53
+LaTeX Font Info:    Try loading font information for T1+ua1 on input line 73.
+LaTeX Font Info:    No file T1ua1.fd. on input line 73.
 
 
 LaTeX Font Warning: Font shape `T1/ua1/bx/n' undefined
-(Font)              using `T1/cmr/m/n' instead on input line 74.
+(Font)              using `T1/cmr/m/n' instead on input line 73.
 
 
 LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <20> not available
-(Font)              size <20.74> substituted on input line 74.
+(Font)              size <20.74> substituted on input line 73.
 
 
 LaTeX Font Warning: Font shape `T1/ua1/bx/n' in size <20> not available
-(Font)              size <20.74> substituted on input line 74.
+(Font)              size <20.74> substituted on input line 73.
 
 <positivo_cor.pdf, id=95, 119.44624pt x 60.225pt>
 File: positivo_cor.pdf Graphic file (type pdf)
  <use positivo_cor.pdf>
-\len@lskipoffset=\skip48
-\len@lskipoffset=\skip49
+\len@lskipoffset=\skip54
+\len@lskipoffset=\skip55
 
 [1
 
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./positivo_cor.pdf>]
-LaTeX Font Info:    Try loading font information for U+msa on input line 74.
+LaTeX Font Info:    Try loading font information for U+msa on input line 73.
 
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 74.
+LaTeX Font Info:    Try loading font information for U+msb on input line 73.
 
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
-\@tempa=\count111
+\@tempa=\count123
  [2
 
 ]
-\len@brasiliaw=\skip50
-\len@uadesch=\skip51
-\len@uacaph=\skip52
+\len@brasiliaw=\skip56
+\len@uadesch=\skip57
+\len@uacaph=\skip58
 File: positivo_cor.pdf Graphic file (type pdf)
 
 <use positivo_cor.pdf>
-\len@lskipoffset=\skip53
-\len@lskipoffset=\skip54
+\len@lskipoffset=\skip59
+\len@lskipoffset=\skip60
  [3
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.81   \begin{agradecimentos}
+l.80   \begin{agradecimentos}
                               [1
 
 
@@ -651,7 +720,7 @@ l.81   \begin{agradecimentos}
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.85   \begin{resumo}
+l.84   \begin{resumo}
                       [2
 
 
@@ -659,7 +728,7 @@ l.85   \begin{resumo}
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.90   \begin{abstract}
+l.89   \begin{abstract}
                         [3
 
 
@@ -687,115 +756,115 @@ l.90   \begin{abstract}
 
 ] (./capitulos/capitulo1.tex
 Cap\'{\i }tulo 1.
-) (./capitulos/capitulo2.tex [1
-
-
-]
-Cap\'{\i }tulo 2.
-[2
-
-] <images/agente-basico.png, id=229, 280.04625pt x 177.66376pt>
-File: images/agente-basico.png Graphic file (type png)
-
-<use images/agente-basico.png>
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 36.
-
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 17.
 (/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 36.
- [3 <./images/agente-basico.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 50--50
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 17.
+ [1
+
+
+])
+(./capitulos/capitulo2.tex [2]
+Cap\'{\i }tulo 2.
+[3
+
+] <images/agente-basico.png, id=235, 280.04625pt x 177.66376pt>
+File: images/agente-basico.png Graphic file (type png)
+
+<use images/agente-basico.png> [4 <./images/agente-basico.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 52--52
 []\T1/cmr/bx/n/12 Tipo de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 50--50
+Underfull \hbox (badness 10000) in paragraph at lines 52--52
 []\T1/cmr/bx/n/12 Medida de
  []
 
 
-Underfull \hbox (badness 1466) in paragraph at lines 52--52
+Underfull \hbox (badness 1466) in paragraph at lines 54--54
 []\T1/cmr/m/n/12 Avarias no veí-
  []
 
 
-Underfull \hbox (badness 1735) in paragraph at lines 52--52
+Underfull \hbox (badness 1735) in paragraph at lines 54--54
 []\T1/cmr/m/n/12 Freio do carro,
  []
 
 
-Underfull \hbox (badness 2111) in paragraph at lines 54--54
+Underfull \hbox (badness 2111) in paragraph at lines 56--56
 \T1/cmr/m/n/12 nente com-pu-ta-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 54--54
+Underfull \hbox (badness 10000) in paragraph at lines 56--56
 []\T1/cmr/m/n/12 Quantidade de
  []
 
 
-Underfull \hbox (badness 1496) in paragraph at lines 56--56
+Underfull \hbox (badness 1496) in paragraph at lines 58--58
 []\T1/cmr/m/n/12 Saúde do pa-ci-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--56
+Underfull \hbox (badness 10000) in paragraph at lines 58--58
 []\T1/cmr/m/n/12 Paciente,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--56
+Underfull \hbox (badness 10000) in paragraph at lines 58--58
 \T1/cmr/m/n/12 am-bi-ente
  []
 
 
-Underfull \hbox (badness 1466) in paragraph at lines 56--57
+Underfull \hbox (badness 1466) in paragraph at lines 58--59
 \T1/cmr/m/n/12 to-mas do pa-ci-
  []
 
 
-Overfull \hbox (3.09444pt too wide) in paragraph at lines 48--59
+Overfull \hbox (3.09444pt too wide) in paragraph at lines 50--61
 [][] 
  []
 
-[4] [5] [6]
-<images/dependabilidade-seguranca.png, id=259, 358.33875pt x 153.57375pt>
+[5] [6] [7]
+<images/dependabilidade-seguranca.png, id=263, 358.33875pt x 153.57375pt>
 File: images/dependabilidade-seguranca.png Graphic file (type png)
 
-<use images/dependabilidade-seguranca.png> [7 <./images/dependabilidade-seguran
-ca.png (PNG copy)>] [8] [9]
+<use images/dependabilidade-seguranca.png> [8 <./images/dependabilidade-seguran
+ca.png (PNG copy)>] [9] [10] [11]
 
-LaTeX Warning: Reference `flooding-architecture' on page 10 undefined on input 
-line 198.
+LaTeX Warning: Reference `flooding-architecture' on page 12 undefined on input 
+line 207.
 
-<images/flooding-architecture.png, id=288, 383.4325pt x 352.31625pt>
+<images/flooding-architecture.png, id=297, 383.4325pt x 352.31625pt>
 File: images/flooding-architecture.png Graphic file (type png)
 
-<use images/flooding-architecture.png> [10] [11 <./images/flooding-architecture
-.png (PNG copy)>] [12]
-<images/rede-tapestry.png, id=313, 556.0775pt x 248.93pt>
+<use images/flooding-architecture.png> [12 <./images/flooding-architecture.png 
+(PNG copy)>] [13] [14] [15]
+<images/rede-tapestry.png, id=326, 556.0775pt x 248.93pt>
 File: images/rede-tapestry.png Graphic file (type png)
 
-<use images/rede-tapestry.png> [13 <./images/rede-tapestry.png (PNG copy)>]
-[14] <images/roteamento-pastry.png, id=329, 489.83pt x 439.6425pt>
+<use images/rede-tapestry.png> [16 <./images/rede-tapestry.png (PNG copy)>]
+[17] <images/roteamento-pastry.png, id=342, 489.83pt x 439.6425pt>
 File: images/roteamento-pastry.png Graphic file (type png)
 
-<use images/roteamento-pastry.png> [15 <./images/roteamento-pastry.png>]
-<images/arvore-kademlia.png, id=346, 559.08875pt x 274.02374pt>
+<use images/roteamento-pastry.png> [18 <./images/roteamento-pastry.png>]
+<images/arvore-kademlia.png, id=356, 559.08875pt x 274.02374pt>
 File: images/arvore-kademlia.png Graphic file (type png)
 
-<use images/arvore-kademlia.png> [16 <./images/arvore-kademlia.png (PNG copy)>]
-<images/kademlia-k-bucket.png, id=354, 573.14125pt x 392.46625pt>
+<use images/arvore-kademlia.png> [19]
+<images/kademlia-k-bucket.png, id=366, 573.14125pt x 392.46625pt>
 File: images/kademlia-k-bucket.png Graphic file (type png)
 
-<use images/kademlia-k-bucket.png> [17] [18 <./images/kademlia-k-bucket.png (PN
-G copy)>] <images/ambiente.png, id=370, 369.38pt x 137.51375pt>
+<use images/kademlia-k-bucket.png> [20 <./images/arvore-kademlia.png (PNG copy)
+>] [21 <./images/kademlia-k-bucket.png (PNG copy)>]
+<images/ambiente.png, id=383, 369.38pt x 137.51375pt>
 File: images/ambiente.png Graphic file (type png)
 
-<use images/ambiente.png> [19 <./images/ambiente.png (PNG copy)>] [20])
-[21] (./monografia.bbl (./monografia.brf)
+<use images/ambiente.png> [22] [23 <./images/ambiente.png (PNG copy)>])
+[24] (./monografia.bbl (./monografia.brf)
 \tf@brf=\write7
 \openout7 = `monografia.brf'.
 
@@ -820,13 +889,13 @@ l em
 
 Underfull \hbox (badness 1769) in paragraph at lines 27--27
 \T1/cmr/m/n/12 http://monografias.cic.unb.br/dspace/handle/123456789/316, Março
- 2011.  [][]18[][],
+ 2011.  [][]22[][],
  []
 
-[22
+[25
 
 
-]) [23] (./monografia.aux)
+]) [26] (./monografia.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.74pt have occurred.
@@ -840,13 +909,13 @@ LaTeX Warning: There were undefined references.
  )
 (\end occurred when \iffalse on line 462 was incomplete) 
 Here is how much of TeX's memory you used:
- 7371 strings out of 495041
- 100575 string characters out of 1181896
- 192298 words of memory out of 3000000
- 10273 multiletter control sequences out of 15000+50000
+ 8006 strings out of 495041
+ 107769 string characters out of 1181896
+ 203206 words of memory out of 3000000
+ 10886 multiletter control sequences out of 15000+50000
  18136 words of font info for 45 fonts, out of 3000000 for 9000
  30 hyphenation exceptions out of 8191
- 45i,10n,69p,854b,459s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 45i,10n,69p,854b,464s stack positions out of 5000i,500n,10000p,200000b,50000s
  </home/joaofreitas/.te
 xmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </home/joaofreitas/.texmf-v
 ar/fonts/pk/ljfour/jknappen/ec/ecti1095.600pk> </home/joaofreitas/.texmf-var/fo
@@ -858,10 +927,11 @@ en/ec/ecrm1200.600pk> </home/joaofreitas/.texmf-var/fonts/pk/ljfour/jknappen/ec
 /ecrm1440.600pk> </home/joaofreitas/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx
 1728.600pk> </home/joaofreitas/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.
 600pk> </home/joaofreitas/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2074.600pk
-></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on monografia.pdf (33 pages, 465250 bytes).
+></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share
+/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on monografia.pdf (36 pages, 483457 bytes).
 PDF statistics:
- 906 PDF objects out of 1000 (max. 8388607)
- 98 named destinations out of 1000 (max. 500000)
+ 925 PDF objects out of 1000 (max. 8388607)
+ 100 named destinations out of 1000 (max. 500000)
  230 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -19,7 +19,9 @@ Com o crescimento dos estudos relacionado a este campo, a inteligência artifici
 
 \subsection{Agente}
 
-De acordo com~\cite{novig95}, agentes são entidades (reais ou virtuais) que funcionam de forma autônoma em um ambiente, ou seja, não necessitam de intervenção humana para realizar processamento. Esse ambiente de funcionamento do agente geralmente contém vários outros agentes e é possível a comunicação entre eles através do ambiente por meio de troca de mensagens. Em geral o funcionamento de agentes acontece de forma a perceberem o ambiente em que estão por meio de sensores, fazem análises com base nessa interação inicial e por fim podem agir sobre o ambiente de forma a modifica-lo por meio de efetuadores. A figura~\ref{fig:agente-basico} apresenta um resumo do que foi dito.
+De acordo com~\cite{novig95}, agentes são entidades (reais ou virtuais) que funcionam de forma autônoma em um ambiente, ou seja, não necessitam de intervenção humana para realizar processamento. Esse ambiente de funcionamento do agente geralmente contém vários outros agentes e é possível a comunicação entre eles através do ambiente por meio de troca de mensagens.
+
+Em geral o funcionamento de agentes acontece de forma a perceberem o ambiente em que estão por meio de sensores, fazem análises com base nessa interação inicial e por fim podem agir sobre o ambiente de forma a modifica-lo por meio de efetuadores. A figura~\ref{fig:agente-basico} apresenta um resumo do que foi dito.
 
 \begin{figure}
 	\centering
@@ -62,7 +64,9 @@ Na tabela~\ref{lista_agentes} mostramos alguns exemplos de agentes, apresentando
  
 A primeira linha da tabela~\ref{lista_agentes} é apresentado um exemplo de um agente atuando em um veículo como um sensor de estacionamento. Responsável por auxiliar o motorista no ato de estacionar o carro, o seu ambiente é da classe físico (considerando o carro e o ambiente onde está o carro). Seu sensor de proximidade é a percepção do ambiente e caso detecte que está próximo de um obstáculo pode atuar nos freios dos carros diminuindo a velocidade e evitando colisões. Avarias no carro podem indicar um mal funcionamento do sensor.
 
-A última linha da tabela~\ref{lista_agentes} expõe um exemplo de um agente médico atuando em um ambiente estático um paciente. Esse ambiente é dito estático por que não será alterado pelo agente nesse exemplo, mas podendo ser diferente dependendo da aplicação. O objetivo principal é monitorar a saúde do paciênte, logo a medida de performance será a aproximação ou não do diagnóstico médico. Seu atuador não será diretamente no ambiente (corpo humano), será na forma de relatórios médicos e seus sensores podem variar de acordo com a doença a ser monitorada.
+A segunda linha da tabela é apresentado u exemplo de agente atuando em um jogo qualquer. Esse ambiente é dito dinâmico, pois a cada jogada de um oponente (real ou não), o agente irá analisar a jogada feita pelo seu oponente, irá calcular sua próxima jogada e irá realizá-la. O objetivo principal do agente é a vitória. O ambiente que o agente atua é um software e o seu atuador é um algum mecanismo que permite que ele realize a jogada. O sensor é o mecanismo no qual o agente irá perceber a jogada realizada pelo oponente.
+
+Por fim, última linha da tabela~\ref{lista_agentes} expõe um exemplo de um agente médico atuando em um ambiente estático um paciente. Esse ambiente é dito estático por que não será alterado pelo agente nesse exemplo, mas podendo ser diferente dependendo da aplicação. O objetivo principal é monitorar a saúde do paciênte, logo a medida de performance será a aproximação ou não do diagnóstico médico. Seu atuador não será diretamente no ambiente (corpo humano), será na forma de relatórios médicos e seus sensores podem variar de acordo com a doença a ser monitorada.
 
 Conforme podemos encontrar em~\cite{wooldridge04}, podemos definir algumas noções gerais de agentes. A primeira, chamada de noção fraca, contém a maior parte dos agentes. Ela compreende os aspectos de \emph{reatividade}, \emph{proatividade} e \emph{habilidade social}. O conceito de reatividade  está ligado com o agente perceber o ambiente e reagir. Proatividade é a característica do agente tomar a iniciativa e agir sem a necessidade de nenhum estímulo. Habilidade social é a capacidade de interação com outros agentes.
 
@@ -108,12 +112,15 @@ De acordo com~\cite{sarmento11}, podemos encontrar as seguintes características
 
 \section{Dependabilidade}
 
-
-Antes de falar em dependabilidade, é necessário algumas definições.
+Antes de falar em dependabilidade, são necessárias algumas definições.
 
 A definição original de dependabilidade de software é a habilidade de um sistema prover um serviço que pode ser justificadamente confiável. Uma outra definição alternativa é a dependabilidade de um sistema é a habilidade de evitar falhas que são mais frequentes e mais graves do que o aceitável.
 
-Dependabilidade é uma área que vem desenvolvendo seus estudos de forma crescente ao longo dos anos. De acordo com~\cite{algirdas04}, o conceito de dependabilidade abrange uma série de principais atributos que a integram. O primeiro deles é disponibilidade, onde um serviço deve estar o disponível o máximo de tempo possível. A confiabilidade garante que o serviço usado é sempre confiável. A segurança é a garantia de não haver consequências catastróficas para o ambiente no uso do serviço. Integridade garante não alteração nas propriedades. Manutenibilidade é a garantia que é possível mudanças e reparos no sistema provedor do serviço.
+Dependabilidade é uma área que vem desenvolvendo seus estudos de forma crescente ao longo dos anos. De acordo com~\cite{algirdas04}, o conceito de dependabilidade abrange uma série de principais atributos que a integram.
+
+O primeiro deles é disponibilidade, onde um serviço deve estar o disponível o máximo de tempo possível. A confiabilidade garante que o serviço usado é sempre confiável.
+
+A segurança é a garantia de não haver consequências catastróficas para o ambiente no uso do serviço. Integridade garante não alteração nas propriedades. Manutenibilidade é a garantia que é possível mudanças e reparos no sistema provedor do serviço.
 
 Alguns atributos são muito próximos da segurança da informação, como por exemplo a confidencialidade, que é a capacidade de não prover informação para entidades desconhecidas. Outros atributos são, na verdade, uma composição com a segurança. Por exemplo a integridade e disponibilidade. Integridade com acessos não autorizados e disponibilidade apenas para acessos autorizados. A figura~\ref{fig:dependabilidade-seguranca} sintetiza o que foi dito, mostrando os atributos em comum das duas áreas:
 
@@ -168,7 +175,9 @@ Por outro lado aplicações de alto desempenho veem no P2P um futuro bastante pr
 
 \subsection{Arquitetura}
 
-As redes P2P podem ser dividas de acordo com a sua forma de funcionamento, entre outras palavras, a arquitetura. As principais arquiteturas são: Localização centralizada, baseada em inundação e redes de superposicão. Esta seção tem por objetivo introduzir os principais conceitos dessas arquiteturas.
+As redes P2P podem ser dividas de acordo com a sua forma de conhecer a rede e rotear mensagens entre os nós, ou seja, diferem-se na sua arquitetura. As principais arquiteturas são: Localização centralizada, baseada em inundação e redes de superposicão. Cada uma dessas arquiteturas possuem características interessantes nos aspectos de roteamento, comunicação e organização dos pares.
+
+ Esta seção tem por objetivo introduzir os principais conceitos dessas arquiteturas.
 
 \subsubsection{Localização centralizada}
 
@@ -187,7 +196,7 @@ O maior exemplo de localização centralizada foi o Napster, possuindo todo o me
 Existem algumas abordagens onde o servidor central é de certa forma ''descentralizado``. Ao invés de um servidor central, são criados vários servidores centrais. Dessa forma, um ~\emph{host} que deseja fazer uma busca pode conectar-se a vários servidores e a rede não fica totalmente presa a um único ponto de distribuição de dados.
 
 A busca por dados é feita de forma iterativa nos servidores centrais: Cada um deles verifica se existe ou não o arquivo procurado nos seus dados. Ao invés de receber apenas um endereço IP, o \emph{host} que fez a busca recebe uma lista de endereços dos servidores centrais.
-Um exemplo de programa que faz uso dessa rede é o Edonkey, que após o Napster surgiu como uma gigante de compartilhamento de dados.
+Um exemplo de programa que faz uso dessa rede é o Edonkey que, após o Napster, surgiu como um gigante de compartilhamento de dados.
 
 \subsubsection{Baseada em inundação}
 
@@ -204,14 +213,57 @@ Quando um nó envia para os seus vizinhos uma requisicão de arquivo ou serviço
 	\label{fig:flooding-architecture}
 \end{figure}
 
-Essa abordagem porém possui diversas desvantagens. Podemos notar que a probabilidade de congestionamento da rede é muito alta. Diversas requisições de buscas podem ser disparadas por vários nós, o que pode rapidamente sobrecarregar a rede com tantos pedidos. Ou seja, essa abordagem exige uma alta capacidade de processamento, além de exigir muita largura de banda.
+Essa abordagem porém possui diversas desvantagens. Podemos notar que a probabilidade de congestionamento da rede é muito alta. Diversas requisições de buscas podem ser disparadas por vários nós, o que pode rapidamente sobrecarregar a rede com tantos pedidos. Além disso, mesmo após uma resposta de que o arquivo na rede foi encontrado, as mensagens de requisição continuarão a se propagar na rede. Logo essa abordagem exige uma alta capacidade de processamento, além de exigir muita largura de banda.
 
-Outro problema visível é que não é garantido a disponibilidade de arquivos na rede. Supondo um caso onde um arquivo a ser encontrado está mais longe do que o TTL ou do tempo necessário para encontrá-lo, ocasionará a indisponibilidade dele para aquele nó.
+Outro problema visível é que não é garantido a disponibilidade de arquivos na rede. Supondo um caso onde um arquivo a ser encontrado está mais longe do que o TTL ou do tempo necessário para encontrá-lo, será impossível para um nó encontrar esse arquivo na rede. Portanto isso ocasionará a indisponibilidade deste arquivo para aquele nó.
 
-Artigo de freenet~\cite{ian02}
-\subsubsection{Redes de superposicão}
+Um exemplo de rede que usa a arquitetura de inundação é a \emph{Gnutella}. Ela segue o que foi explicado acima com poucas alterações. Dessa forma características como o anonimato dos peers é bastante comprometida. Além disso, qualquer um pode obter uma lista de arquivos compartilhados de um nó, visto que o \emph{Gnutella} não tem implementações de segurança.
+
+Um outro exemplo pode ser visto na rede \emph{Freenet}, também sem servidor central. De acordo com~\cite{ian02}, o \emph{Freenet} foi desenvolvido para haver o anonimato completo e absoluto. Isso implica que não é possível saber a origem de um arquivo na rede, os nós que estão fazendo download desse arquivo no momento e nem qualquer informação relativa a arquivos. Os objetivos da rede são a liberdade de expressão, liberdade social e política.
+
+A forma de armazenamento da informação é bastante distinta das outras arquiteturas. Um arquivo não fica necessariamente na máquina do usuário, ele pode estar espalhado em máquinas aleatórias pela rede. Quando o número de requisições por esse arquivo cresce, o \emph{Freenet} copia ele para diversos nós na rede. Dessa forma arquivos mais requisitados estão em maiores quantidades na rede. Em contrapartida, arquivos que são menos acessados vão sendo substituídos pelos mais populares, e aos poucos vão sumindo da rede.
+
+Cada arquivo da rede, quando compartilhado, são imediatamente assinados com um certificado digital. Dessa forma o seu conteúdo não pode ser modificado. Por esse motivo e pelo fato de arquivos estarem espalhados pela rede, o usuário de um nó pode não saber que tipo de arquivo está em sua máquina. Dessa forma,um usuário não pode ser responsabilizado pelo conteúdo de sua máquina.
+
+O roteamento de requisições ocorre de forma semelhante ao \emph{Gnutella}, porém a busca por arquivos é feita usando busca em largura, evitando inundação da rede. Além disso quando uma requisição é atendida a resposta volta pelo mesmo caminho da ida.
+
+A rede \emph{Freenet} também realiza \emph{caching}, ou seja, um nó armazena uma lista de arquivos prováveis de estarem armazenados nos vizinhos. Isso aumenta a performance que é bastante reduzida pelo uso de busca em largura.
+
+Uma grande desvantagem do \emph{Freenet} é o seu sistema de busca. Além de possuir as fraquezas da arquitetura de inundação, ela só permite a busca de arquivos pelo nome completo, visto que uma busca por nome parcial poderia identificar o arquivo em um nó e comprometeria o anonimato.
+
+
+\subsubsection{Redes de sobreposição}
+
+Redes de sobreposição são redes virtuais que são criadas em cima da topologia de rede física. Elas surgem para tentar solucionar o problema de localização de nós e dados na rede sem limitações de alcançe de mensagens, comprometimento do desempenho, centralização de informação e problemas de segurança.
+
+As principais características das redes de sobreposição são:
+
+\begin{itemize}
+	\item Auto organizada - A rede gerencia os vizinhos dos nós
+	\item Escalável - A entrada ou saída de nós na rede pode ser realizada de maneira fácil.
+	\item Descentralização - Não existe uma entidade central que controla informação.
+	\item robustez - Não existem ponto único de falhas, entrada e saída de nós não derrubam o sistema, robustez contra ataques.
+	\item balanceamento de carga - A rede gerencia os nós com mais processamento para os nós com menos processamento.
+\end{itemize}
+
+Atualmente a internet é a base de muitas das redes sobrepostas. Dessa forma é possível rotear mensagens na rede sem a necessidade de endereçar um endereço IP. É possível endereçar nós usando outra forma de identificar um nó, por exemplo tabelas de hash distribuídos.
+
+Tabela de hash distribuídos (DHT) são mecanismos baseados em chave e valor usados para controlar a localização de cada nó na rede. É um mecanismo descentralizado, sem nenhuma forma de coordenação centralizada. Dessa forma eles podem recuperar de forma eficiente um valor na tabela.
+
+Uma característica além da descentralização é a tolerância a falhas das DHTs, elas são confiáveis mesmo com a falha, entrada ou mesmo saída de um nó da rede e garantem o funcionamento da rede em um desses casos.
+
+Diversos algoritmos são implementados com o objetivo de controlar entrada e saída de nós, bem como o roteamento de informações e nós na rede. A próxima seção desse trabalho explica os principais algoritmos das redes de sobreposição, introduzindo conceitos relativos à cada rede.
 
 \subsection{Roteamento}
+
+Segue abaixo os principais algoritmos das redes de sobreposição. O objetivo dessa seção é explicar conceitos introdutórios dos algoritmos, visto que serão importantes para análise de dependabilidade e confiabilidade de entrega de mensagens nos nós. Eles estão estruturados da seguinte forma:
+\begin{itemize}
+	\item Plaxton
+	\item Tapestry
+	\item Pastry
+	\item Kademlia
+	\item Chord
+\end{itemize}
 
 \subsubsection{Plaxton}
 
@@ -233,7 +285,7 @@ Como dito anteriormente, é possível o cliente enviar uma mensagem para objetos
 
 \subsubsection{Tapestry}
 
-De acordo com~\cite{rowstron01} o \emph{Tapestry} é uma arquitetura auto organizada, escalável, robusta que faz roteamento requisições de conteúdo para o destino de forma eficiente e totalmente descentralizada em um ambiente de carga alta de uso, rede congestionada e alta probabilidade de falha nos nós. O \emph{Tapestry} tem uma noção de localidade dos pares, o que garante que ele conseguirá entregar requisições de forma independente dos nós. Foi desenvolvido em 2004 na Universidade da Califórnia, \emph{Berkley} e foi baseado no \emph{Plaxton}.
+De acordo com~\cite{rowstron01} o \emph{Tapestry} é uma forma de rotear mensagens para o destino de forma eficiente e totalmente descentralizada em um ambiente de carga alta de uso, rede congestionada e alta probabilidade de falha nos nós. O \emph{Tapestry} tem uma noção de localidade dos pares, o que garante que ele conseguirá entregar requisições de forma independente dos nós. Foi desenvolvido em 2004 na Universidade da Califórnia, \emph{Berkley} e foi baseado no \emph{Plaxton}.
 
 O \emph{Tapestry} mantém uma semelhanças com o \emph{Plaxton} que é o modo de endereçamento da malha de vizinhos: O número ID dos vizinhos ainda é o responsável pelo roteamento de mensagens e objetos. Cada vizinho de um nó é separado conforme o número de cada caracter na tabela de vizinhos. Os caracteres do ID normalmente são dígitos hexadecimais, o que ocasiona em uma tabela de base 16, sendo que o \emph{Tapestry} mantém várias tabelas de vizinhos. A tabela~\ref{mapa_vizinhaca_tapestry} exemplifica o que foi mostrado.
 
@@ -300,7 +352,7 @@ Dessa forma, o~\emph{Tapestry} garante alta disponibilidade da rede sem contudo 
 
 Similar ao~\emph{Tapestry}, o \emph{Pastry} é uma rede de roteamento que também utiliza uma tabela hash distribuída nos seus nós para roteamento. Ela preserva as características da rede~\emph{Tapestry}: É completamente descentralizada, tolerante a falhas, escalável e confiável. A rede \emph{pastry} foi concebida para alto desempenho.
 
-De acordo com~\cite{rowstron01}, a arquitetura \emph{pastry} possui a seguinte característica. Cada nó na rede possui um identificador único(\emph{nodeid}). Ao receber uma mensagem e uma chave numérica, a rede tem a capacidade de realizar o roteamento de forma eficiente para o nó que contém a chave mais próxima numericamente, visando minimizar a viagem da mensagem pela rede.
+De acordo com~\cite{rowstron01}, a arquitetura \emph{pastry} possui a seguinte característica: Cada nó na rede possui um identificador único(\emph{nodeid}). Ao receber uma mensagem e uma chave numérica, a rede tem a capacidade de realizar o roteamento de forma eficiente para o nó que contém a chave mais próxima numericamente, visando minimizar a viagem da mensagem pela rede.
 
 \begin{figure}
 	\centering
@@ -310,6 +362,14 @@ De acordo com~\cite{rowstron01}, a arquitetura \emph{pastry} possui a seguinte c
 \end{figure}
 
 A figura~\ref{fig:roteamento-pastry} exemplifica um o roteamento de uma mensagem do nodo 64a1fc até o nodo d467c4. Em cada salto, a rede preocupa-se em encontrar um caminho mínimo para a entrega da mensagem.
+
+O roteamento do \emph{Pastry} possui alguns aspectos interessantes quanto a sua localidade. A rota que uma mensagem deve ser entregue deve ser boa com respeito à métrica de proximidade de nós.
+
+A proximidade, como nas outras redes descritas, está relacionada a uma medida escalar de distância entre dois nós. Assim as propriedades de localidade do \emph{Pastry} são:
+\begin{itemize}
+	\item Rotas curtas: Prioriza a distância total a ser percorrida. As entradas na tabela de roteamento são referentes ao nó mais próximo. Assim a transmissão de mensagens no nó ocorre sempre no caminho mais curto.
+	\item Rotas de convergência: Diz respeito a distância percorrida por duas mensagens enviadas com o mesmo id, antes de suas rota convergirem.
+\end{itemize}
 
 \subsubsection{Kademlia}
 
@@ -368,10 +428,15 @@ Como dito anteriormente, uma das dificuldades é o balanceamento da árvore. Cas
 
 \subsubsection{Chord}
 
-\subsubsection{CAN}
+A arquitetura \emph{Chord} define apenas uma operação sobre os nós: O mapeamento sobre os ids. A rede organiza-se na forma de anel, colocando os nós na forma crescente de ID. Sabendo que a rede possui um tamanho de \emph{n} nós, cada nó conhece apenas $\log$(n) vizinhos em sua tabela de roteamento.
 
-\subsubsection{Freenet}
+Ele basicamente difere-se das outras redes P2P em algumas características. A simplicidade de efetuar rota em cima das chaves, a corretude de necessitar apenas de uma parte correta da informação para garantir a corretude de pesquisas, mapeamento de chaves em nós e não em outros valores. Além disso, necessita de uma pequena quantidade de informação de rota sobre os outros nós.
 
+O protocolo do \emph{Chord} descrito em~\cite{stoica01} espeficica como encontrar a localização das chaves, determina a forma como os nós saem e entram na rede e explica como aplicar algoritmos de estabilização para recuperar nós de falhas nas tabelas de roteamento.
+
+A busca de nós na rede~\emph{Chord} ocorre de maneira muito simples. Ao buscar por um nó de id \emph{x} na rede, a tabela de roteamento é investigada a procura de um ID igual a \emph{x}. Caso não seja encontrado, é feita uma requisição ao nó imediatamente menor que \emph{x}. Esse procedimento é repetido em todos os nós até ser encontrado o nó com id \emph{x} ou então não houverem mais nós menores que \emph{x}.
+
+O \emph{Chord} garante que os resultados de uma pesquisa são corretos mesmo com uma entrada válida na tabela. Como a tabela de roteamento é pequena, é fácil mantê-la atualizada através de algoritmos de estabilização rodando em intervalos regulares.
 
 \section{JAMA}
 
@@ -380,7 +445,7 @@ O desenvolvimento completo da plataforma JAMA está descrita em~\cite{parise11}.
 	\item Tolerância a falhas.
 	\item Balanceamento de carga.
 	\item Escalabilidade da aplicação.
-	\item Descentralização dos serviços nas bordas da rede	.
+	\item Descentralização dos serviços nas bordas da rede.
 \end{itemize}
 
 
@@ -398,7 +463,7 @@ Como foi dito anteriormente, um sistema multiagente tem basicamente duas entidad
 
 \subsection{Ambiente}
 
-Na arquitetura do JAMA atua como uma camada que abstrai as camadas inferiores, permitindo a localização e comunicação de agentes de forma mais transparente. Os agentes emitem mensagens nesse ambiente e ele se encarrega de notificar todos os agentes ouvintes. Por ser uma arquitetura distribuída, os agentes não tem conhecimento se estão rodando na mesma máquina ou não. Logo não existe comunicação direta entre os agentes, o ambiente será o mediador entre eles caso seja necessário haver algum tipo de comunicação. A imagem~\ref{fig:ambiente} sintetiza o que foi explicado.
+A arquitetura do JAMA atua como uma camada que abstrai as camadas inferiores, permitindo a localização e comunicação de agentes de forma mais transparente. Os agentes emitem mensagens nesse ambiente e ele se encarrega de notificar todos os agentes ouvintes. Por ser uma arquitetura distribuída, os agentes não tem conhecimento se estão rodando na mesma máquina ou não. Logo não existe comunicação direta entre os agentes, o ambiente será o mediador entre eles caso seja necessário haver algum tipo de comunicação. A imagem~\ref{fig:ambiente} sintetiza o que foi explicado.
 
 \begin{figure}
 	\centering
@@ -443,9 +508,11 @@ O ciclo de vida de um agente segue basicamente os seguintes passos:
 
 
 \section{Desafios desse trabalho}
-O trabalho porém carece de uma análise de dependabilidade, envolvendo os seus componentes e integração dos mesmos. Não existe um estudo detalhado mensurando o grau de dependabilidade entre os componentes principais (barramento de eventos, adaptador de rede, serviços da rede, etc), nem mesmo detalhando a dependência entre esses módulos. Faz-se necessário então um estudo mais aprofundado na plataforma, sendo esse portanto o foco principal deste trabalho.
+O trabalho porém carece de uma análise de dependabilidade, envolvendo os seus componentes e integração dos mesmos. Não existe um estudo detalhado mensurando o grau de dependabilidade entre os componentes principais (barramento de eventos, adaptador de rede, serviços da rede, etc), nem mesmo detalhando a dependência entre esses módulos.
 
+Além disso, devem ser analisados módulos da rede de sobreposição (o pastry) a fim de garantir alguns aspectos do seu funcionamento. Por exemplo, deve-se analisar a corretude no roteamento das mensagens, ou seja, uma mensagem não vai chegar em um nó ao qual não seja o destino. Também deve ser garantido que as mensagens sempre chegarão ao seu destino, analisando então a robustez do sistema.
 
+Faz-se necessário então um estudo mais aprofundado na plataforma, sendo esse portanto o foco principal deste trabalho.
 
 
 
