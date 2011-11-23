@@ -171,7 +171,9 @@ Uma aplicação interessante está disponível no artigo de~\cite{stilling03}, u
 
 O futuro do P2P ainda permanece incerto. Por um lado existem grandes dificuldades a serem enfrentadas pelas empresas que usam a tecnologia. Por exemplo as aplicações de compartilhamento de dados sofrem grande risco de evolução, visto que violam direitos autorais, gerando disputas judiciais e gastos elevados de recursos para proteção de processos legais. Além disso, existe o risco constante de spams e vírus que se propagam na rede e são difíceis de controlar.
 
-Por outro lado aplicações de alto desempenho veem no P2P um futuro bastante promissor. Empresas começam a investir pesado na tecnologia visando obter uma forma barata de armazenamento e compartilhamento de arquivos em suas redes locais. Elas também objetivam redução de custos de hardware, pois aplicações que necessitam de muito poder de processamento exigem hardwares melhores e mais caros. A solução está em dividir o software em vários pares que realizam processamento de partes menores, porém de forma simultânea, ajudando então no processamento total.
+Por outro lado aplicações de alto desempenho veem no P2P um futuro bastante promissor. Empresas começam a investir pesado na tecnologia visando obter uma forma barata de armazenamento e compartilhamento de arquivos em suas redes locais. Elas também objetivam redução de custos de hardware, pois aplicações que necessitam de muito poder de processamento exigem hardwares melhores e mais caros.
+
+A solução está em dividir o software em vários pares que realizam processamento de partes menores, porém de forma simultânea, ajudando então no processamento total.
 
 \subsection{Arquitetura}
 
@@ -417,7 +419,7 @@ Quando o nó \emph{u} aprende um novo nó na rede, ele irá tentar colocá-lo na
 
 \begin{figure}
 	\centering
-	\includegraphics[scale=0.5]{images/kademlia-k-bucket.png}
+	\includegraphics[scale=0.6]{images/kademlia-k-bucket.png}
 	\caption{Evolução da árvore binária de roteamento no \emph{Kademlia} com chaves num espaço de 160 bits. Cada novo nó é dividido em um novo \emph{k-bucket}}.
 	\label{fig:kademlia-k-bucket}
 \end{figure}
@@ -446,6 +448,7 @@ O desenvolvimento completo da plataforma JAMA está descrita em~\cite{parise11}.
 	\item Balanceamento de carga.
 	\item Escalabilidade da aplicação.
 	\item Descentralização dos serviços nas bordas da rede.
+	\item Descentralização de roteamento dos nós.
 \end{itemize}
 
 
@@ -512,7 +515,13 @@ O trabalho porém carece de uma análise de dependabilidade, envolvendo os seus 
 
 Além disso, devem ser analisados módulos da rede de sobreposição (o pastry) a fim de garantir alguns aspectos do seu funcionamento. Por exemplo, deve-se analisar a corretude no roteamento das mensagens, ou seja, uma mensagem não vai chegar em um nó ao qual não seja o destino. Também deve ser garantido que as mensagens sempre chegarão ao seu destino, analisando então a robustez do sistema.
 
-Faz-se necessário então um estudo mais aprofundado na plataforma, sendo esse portanto o foco principal deste trabalho.
+O objetivo dessa análise é permitir encontrar pontos onde podem ser melhorados e garantir uma plataforma mais robusta. Dessa forma garantir uma evolução à plataforma Jama que é uma alternativa à plataforma centralizada do observatório web descrito no trabalho~\cite{observatorio}.
+
+O observatório web é um portal para apresentar ao usuário informações relativas à um contexto definido pelo observatório. Essas informações são retiradas de redes sociais, revistas, portais, dentre outros meios de comunicações.
+
+O arcabouço sobre o qual o Observatório foi criado é de forma centralizada, impedido uma escalabilidade e gerando impacto de performance no sistema atual em produção.
+
+Portanto faz-se necessário então um estudo mais aprofundado na plataforma JAMA, sendo esse portanto o foco principal deste trabalho.
 
 
 
